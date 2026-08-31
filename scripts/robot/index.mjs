@@ -16,10 +16,11 @@ import path from "node:path";
 import * as empleaNautica from "./fuentes/emplea-nautica.mjs";
 import * as jobsAndSea from "./fuentes/jobs-and-sea.mjs";
 import * as infojobs from "./fuentes/infojobs.mjs";
+import * as yacrew from "./fuentes/yacrew.mjs";
 import * as extraer from "./extraer.mjs";
 import { puntuar } from "./puntuar.mjs";
 
-const FUENTES = [empleaNautica, jobsAndSea, infojobs];
+const FUENTES = [empleaNautica, jobsAndSea, infojobs, yacrew];
 const SECO = process.argv.includes("--seco");
 const FICHERO = path.join(process.cwd(), "datos", "ofertas.json");
 

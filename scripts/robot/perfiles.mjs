@@ -49,7 +49,9 @@ export const EXCLUIR = [
   "electricista", "soldador", "fibra", "varadero", "taller",
   // ocio de playa
   "monitor", "moto de agua", "moto acuatica", "jet ski", "jetski",
-  "parasailing", "hinchable", "arrastre", "banana", "flyboard",
+  // Escrito de las tres formas que aparece en los anuncios.
+  "parasailing", "parassailing", "parasail", "parascending",
+  "hinchable", "arrastre", "banana", "flyboard", "donut",
   "paddle", "kayak", "socorrista", "lifeguard", "vela ligera",
   // tierra
   "comercial", "administrativo", "recepcion", "encargado", "gerente",
@@ -97,7 +99,7 @@ export const ZONA_BARCELONA = [
 ];
 
 export const CARIBE = [
-  "caribe", "caribbean", "antigua", "saint martin", "st martin",
+  "caribe", "caribbean", "bahamas", "west indies", "antigua", "saint martin", "st martin",
   "guadalupe", "martinica", "bahamas", "bvi", "tortola", "san blas",
 ];
 
@@ -107,4 +109,6 @@ export const MEDITERRANEO = [
   "cannes", "monaco", "mónaco", "italia", "cerdeña", "sardinia",
   "napoles", "nápoles", "genova", "génova", "grecia", "croacia",
   "turquia", "turquía", "malta", "porto cervo", "portisco", "costa azul",
+  "mediterranean", "med season", "french riviera", "cote d azur", "greece",
+  "croatia", "italy", "sardinia", "corsica", "turkey", "monaco", "genoa",
 ];

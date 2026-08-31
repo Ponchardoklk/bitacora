@@ -20,6 +20,13 @@ export function eslora(texto) {
   const pies = t.match(/(\d{2,3})\s*(?:ft|pies|feet|')\b/);
   if (pies) return Math.round(Number(pies[1]) * 0.3048);
 
+  // Los anuncios de yate escriben "70m+", "40+m MY" o "60m".
+  const masMenos = t.match(/(\d{2,3})\s*\+?\s*m\b|\b(\d{2,3})\s*\+\s*m/);
+  if (masMenos) {
+    const n = Number(masMenos[1] ?? masMenos[2]);
+    if (n >= 6 && n <= 200) return n;
+  }
+
   const metros = t.match(/(\d{2,3})[.,]?\d*\s*(?:m\b|mts\b|metros|meters)/);
   if (metros) {
     const n = Number(metros[1]);
@@ -72,8 +79,11 @@ export function tipoBarco(texto) {
   const t = sinTildes(texto);
   if (contiene(t, ["goleta", "schooner"])) return "goleta";
   if (contiene(t, ["catamaran", "lagoon", "sunreef"])) return "catamaran";
+  // En los anuncios de yate: S/Y es vela y M/Y es motor.
+  if (/\bs\s*\/\s*y\b|\bsy\b/.test(t)) return "velero";
   if (contiene(t, ["velero", "vela", "sailing", "sailboat", "swan", "ketch", "sloop"]))
     return "velero";
+  if (/\bm\s*\/\s*y\b|\bmy\b/.test(t)) return "motor";
   if (contiene(t, ["motora", "lancha", "motor yacht", "a motor", "semirrigida", "neumatica"]))
     return "motor";
   return null;
