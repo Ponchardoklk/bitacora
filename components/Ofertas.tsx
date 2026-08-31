@@ -1,0 +1,690 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import {
+  C,
+  DURACIONES,
+  ESTADOS,
+  MOTIVOS_DESCARTE,
+  PERFILES,
+  PUBLICADAS,
+  TIPOS,
+  ZONAS,
+  etiqueta,
+  sans,
+  serif,
+} from "@/lib/constantes";
+import {
+  MARCA_VACIA,
+  diasDesde,
+  guardarMarcas,
+  horasDesde,
+  leerMarcas,
+  type Marca,
+  type Marcas,
+  type Oferta,
+} from "@/lib/datos";
+
+interface Filtros {
+  zonas: string[];
+  tipos: string[];
+  duraciones: string[];
+  esloraMin: number;
+  salarioMin: number;
+  sinSalario: boolean;
+  estados: string[];
+  dias: number;
+}
+
+const filtrosPorDefecto = (): Filtros => ({
+  zonas: [],
+  tipos: [],
+  duraciones: [],
+  esloraMin: 0,
+  salarioMin: 0,
+  // Casilla marcada por defecto: la mayoría de ofertas no publican salario.
+  sinSalario: true,
+  estados: ["nueva", "guardada", "aplicada"],
+  dias: 0,
+});
+
+const CLAVE_FILTROS = "bitacora:filtros";
+
+const antig = (h: number) =>
+  h < 1 ? "ahora" : h < 24 ? `hace ${h} h` : h < 48 ? "ayer" : `hace ${Math.floor(h / 24)} días`;
+
+const textoAplicada = (d: number) =>
+  d === 0 ? "Aplicaste hoy." : d === 1 ? "Aplicaste ayer." : `Aplicaste hace ${d} días.`;
+
+const alojamientoTexto = (a: string | null) =>
+  a === "a_bordo" ? "vive a bordo" : a === "casa" ? "duerme en casa" : null;
+
+export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
+  const [perfil, setPerfil] = useState<string>("embarque");
+  const [marcas, setMarcas] = useState<Marcas>({});
+  const [abrirFiltros, setAbrirFiltros] = useState(false);
+  const [notaAbierta, setNotaAbierta] = useState<string | null>(null);
+  const [descartando, setDescartando] = useState<string | null>(null);
+
+  const [todos, setTodos] = useState<Record<string, Filtros>>({
+    embarque: filtrosPorDefecto(),
+    barcelona: filtrosPorDefecto(),
+  });
+  const f = todos[perfil];
+
+  // Todo lo que ella marca vive en su móvil, no en ningún servidor.
+  useEffect(() => setMarcas(leerMarcas()), []);
+
+  // Los filtros se guardan por perfil entre sesiones.
+  useEffect(() => {
+    try {
+      const guardado = localStorage.getItem(CLAVE_FILTROS);
+      if (!guardado) return;
+      const leido = JSON.parse(guardado);
+      setTodos({
+        embarque: { ...filtrosPorDefecto(), ...(leido.embarque ?? {}) },
+        barcelona: { ...filtrosPorDefecto(), ...(leido.barcelona ?? {}) },
+      });
+    } catch {
+      /* si el navegador no deja, se usan los de por defecto */
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(CLAVE_FILTROS, JSON.stringify(todos));
+    } catch {
+      /* idem */
+    }
+  }, [todos]);
+
+  const marca = (id: string): Marca => marcas[id] ?? MARCA_VACIA;
+
+  const anotar = (id: string, cambio: Partial<Marca>) =>
+    setMarcas((m) => {
+      const siguiente = {
+        ...m,
+        [id]: { ...MARCA_VACIA, ...m[id], ...cambio, vista: true },
+      };
+      guardarMarcas(siguiente);
+      return siguiente;
+    });
+
+  const cambiar = (id: string, estado: string) =>
+    anotar(id, {
+      estado,
+      motivoDescarte: null,
+      aplicadaEn:
+        estado === "aplicada"
+          ? marcas[id]?.aplicadaEn ?? new Date().toISOString()
+          : null,
+    });
+
+  const descartar = (id: string, motivo: string) => {
+    setDescartando(null);
+    anotar(id, { estado: "descartada", motivoDescarte: motivo });
+  };
+
+  const escribirNota = (id: string, texto: string) => {
+    setNotaAbierta(null);
+    const limpio = texto.trim();
+    anotar(id, { notas: limpio === "" ? null : limpio });
+  };
+
+  const set = <K extends keyof Filtros>(k: K, v: Filtros[K]) =>
+    setTodos((p) => ({ ...p, [perfil]: { ...p[perfil], [k]: v } }));
+
+  const toggle = (k: "zonas" | "tipos" | "duraciones" | "estados", v: string) =>
+    setTodos((p) => {
+      const actual = p[perfil][k];
+      return {
+        ...p,
+        [perfil]: {
+          ...p[perfil],
+          [k]: actual.includes(v)
+            ? actual.filter((x) => x !== v)
+            : [...actual, v],
+        },
+      };
+    });
+
+  const lista = useMemo(
+    () =>
+      ofertas
+        .filter((o) => o.perfil === perfil)
+        .filter((o) => (f.zonas.length ? f.zonas.includes(o.zona ?? "") : true))
+        .filter((o) => (f.tipos.length ? f.tipos.includes(o.tipo ?? "") : true))
+        .filter((o) =>
+          f.duraciones.length ? f.duraciones.includes(o.duracion ?? "") : true
+        )
+        .filter((o) => (o.eslora ?? 0) >= f.esloraMin)
+        .filter((o) =>
+          o.salarioMin == null
+            ? f.sinSalario
+            : o.periodo === "dia"
+            ? true
+            : o.salarioMin >= f.salarioMin
+        )
+        .filter((o) => f.estados.includes(marca(o.id).estado))
+        .filter((o) => (f.dias ? horasDesde(o.publicada) <= f.dias * 24 : true))
+        .sort(
+          (a, b) =>
+            b.score - a.score || horasDesde(a.publicada) - horasDesde(b.publicada)
+        ),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [ofertas, perfil, f, marcas]
+  );
+
+  // Lo que ya ha pasado por pantalla deja de estar "sin ver".
+  useEffect(() => {
+    const pendientes = lista.filter((o) => !marca(o.id).vista).map((o) => o.id);
+    if (pendientes.length === 0) return;
+    const t = setTimeout(() => {
+      setMarcas((m) => {
+        const siguiente = { ...m };
+        for (const id of pendientes) {
+          siguiente[id] = { ...MARCA_VACIA, ...m[id], vista: true };
+        }
+        guardarMarcas(siguiente);
+        return siguiente;
+      });
+    }, 4000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lista]);
+
+  const sinVer = ofertas.filter(
+    (o) => o.perfil === perfil && !marca(o.id).vista
+  ).length;
+
+  const activos =
+    f.zonas.length +
+    f.tipos.length +
+    f.duraciones.length +
+    (f.esloraMin ? 1 : 0) +
+    (f.salarioMin ? 1 : 0) +
+    (f.dias ? 1 : 0);
+
+  // Aplicada hace más de 7 días y sin respuesta.
+  const aviso = useMemo(() => {
+    const candidatas = ofertas
+      .filter((o) => o.perfil === perfil)
+      .map((o) => ({ oferta: o, m: marca(o.id) }))
+      .filter(
+        (x) =>
+          x.m.estado === "aplicada" &&
+          x.m.aplicadaEn &&
+          diasDesde(x.m.aplicadaEn) > 7
+      )
+      .sort((a, b) => diasDesde(b.m.aplicadaEn!) - diasDesde(a.m.aplicadaEn!));
+    return candidatas[0];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ofertas, perfil, marcas]);
+
+  const pedianEng1 = ofertas.filter(
+    (o) => o.eng1 && horasDesde(o.publicada) <= 90 * 24
+  ).length;
+
+  return (
+    <div
+      className="min-h-screen w-full pb-16"
+      style={{ background: C.papel, fontFamily: sans, color: C.tinta }}
+    >
+      {/* Cabecera */}
+      <header className="sticky top-0 z-20" style={{ background: C.tinta, color: C.papel }}>
+        <div className="px-4 pt-4 pb-3">
+          <div className="flex items-baseline justify-between">
+            <h1 style={{ fontFamily: serif, fontSize: 22, letterSpacing: "0.01em" }}>
+              Cuaderno de bitácora
+            </h1>
+            <span style={{ fontSize: 12, color: C.arena }}>Gemma</span>
+          </div>
+
+          <div className="mt-3 flex gap-1">
+            {PERFILES.map(([k, label]) => (
+              <button
+                key={k}
+                onClick={() => setPerfil(k)}
+                className="flex-1 py-2 text-sm"
+                style={{
+                  background: perfil === k ? C.papel : "transparent",
+                  color: perfil === k ? C.tinta : C.papel,
+                  border: `1px solid ${perfil === k ? C.papel : C.sonda}`,
+                  fontWeight: perfil === k ? 600 : 400,
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="flex items-center justify-between px-4 py-2"
+          style={{ background: C.sonda, fontSize: 13 }}
+        >
+          <span>
+            <strong style={{ fontVariantNumeric: "tabular-nums" }}>{sinVer}</strong> sin
+            ver · {lista.length} en pantalla
+          </span>
+          <button
+            onClick={() => setAbrirFiltros((v) => !v)}
+            style={{ color: C.papel, textDecoration: "underline" }}
+          >
+            Filtros{activos ? ` (${activos})` : ""}
+          </button>
+        </div>
+      </header>
+
+      {/* Filtros */}
+      {abrirFiltros && (
+        <section
+          className="px-4 py-4"
+          style={{ background: C.papelAlt, borderBottom: `1px solid ${C.linea}` }}
+        >
+          <Grupo titulo="Zona">
+            {ZONAS.map(([k, l]) => (
+              <Chip key={k} on={f.zonas.includes(k)} click={() => toggle("zonas", k)}>
+                {l}
+              </Chip>
+            ))}
+          </Grupo>
+
+          <Grupo titulo="Tipo de barco">
+            {TIPOS.map(([k, l]) => (
+              <Chip key={k} on={f.tipos.includes(k)} click={() => toggle("tipos", k)}>
+                {l}
+              </Chip>
+            ))}
+          </Grupo>
+
+          <Grupo titulo="Duración">
+            {DURACIONES.map(([k, l]) => (
+              <Chip
+                key={k}
+                on={f.duraciones.includes(k)}
+                click={() => toggle("duraciones", k)}
+              >
+                {l}
+              </Chip>
+            ))}
+          </Grupo>
+
+          <Grupo titulo={`Eslora mínima · ${f.esloraMin} m`}>
+            <input
+              type="range"
+              min="0"
+              max="60"
+              step="5"
+              value={f.esloraMin}
+              onChange={(e) => set("esloraMin", +e.target.value)}
+              className="w-full"
+              style={{ accentColor: C.sonda }}
+            />
+          </Grupo>
+
+          <Grupo
+            titulo={`Salario mínimo · ${
+              f.salarioMin ? f.salarioMin + " €/mes" : "sin límite"
+            }`}
+          >
+            <input
+              type="range"
+              min="0"
+              max="4500"
+              step="250"
+              value={f.salarioMin}
+              onChange={(e) => set("salarioMin", +e.target.value)}
+              className="w-full"
+              style={{ accentColor: C.sonda }}
+            />
+            <label className="mt-2 flex items-center gap-2" style={{ fontSize: 13 }}>
+              <input
+                type="checkbox"
+                checked={f.sinSalario}
+                onChange={(e) => set("sinSalario", e.target.checked)}
+                style={{ accentColor: C.sonda }}
+              />
+              Incluir ofertas sin salario publicado
+            </label>
+            <p style={{ fontSize: 11, color: C.suave, marginTop: 4 }}>
+              La mayoría no lo publica. Si lo desmarcas, pierdes casi todo.
+            </p>
+          </Grupo>
+
+          <Grupo titulo="Estado">
+            {ESTADOS.map(([k, l]) => (
+              <Chip key={k} on={f.estados.includes(k)} click={() => toggle("estados", k)}>
+                {l}
+              </Chip>
+            ))}
+          </Grupo>
+
+          <Grupo titulo="Publicadas">
+            {PUBLICADAS.map(([k, l]) => (
+              <Chip key={k} on={f.dias === k} click={() => set("dias", k)}>
+                {l}
+              </Chip>
+            ))}
+          </Grupo>
+
+          <button
+            onClick={() => setTodos((p) => ({ ...p, [perfil]: filtrosPorDefecto() }))}
+            style={{ fontSize: 12, color: C.sonda, textDecoration: "underline" }}
+          >
+            Dejar los filtros como estaban
+          </button>
+        </section>
+      )}
+
+      {/* Seguimiento */}
+      {aviso && (
+        <div
+          className="mx-4 mt-4 px-3 py-2"
+          style={{
+            background: C.papelAlt,
+            borderLeft: `3px solid ${C.arena}`,
+            fontSize: 13,
+          }}
+        >
+          Aplicaste a{" "}
+          <em style={{ fontFamily: serif }}>
+            {aviso.oferta.barco ?? aviso.oferta.puesto}
+          </em>{" "}
+          hace {diasDesde(aviso.m.aplicadaEn!)} días y no hay respuesta. Toca
+          insistir.
+        </div>
+      )}
+
+      {/* Lista */}
+      <main className="px-4 pt-4">
+        {lista.length === 0 ? (
+          <div className="py-16 text-center" style={{ color: C.suave }}>
+            <p style={{ fontFamily: serif, fontSize: 17, color: C.tinta }}>
+              Nada con estos filtros
+            </p>
+            <p style={{ fontSize: 13, marginTop: 6 }}>
+              Baja la eslora mínima o amplía la zona.
+            </p>
+          </div>
+        ) : (
+          <ul className="space-y-3">
+            {lista.map((o) => {
+              const m = marca(o.id);
+              const horas = horasDesde(o.publicada);
+              return (
+                <li
+                  key={o.id}
+                  style={{
+                    background: C.papelAlt,
+                    borderLeft: `4px solid ${
+                      o.score >= 9 ? C.estribor : o.score >= 7 ? C.sonda : C.linea
+                    }`,
+                    opacity: m.estado === "descartada" ? 0.55 : 1,
+                  }}
+                >
+                  <div className="px-3 py-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <h2 style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.3 }}>
+                        {o.puesto}
+                      </h2>
+                      {!m.vista && (
+                        <span
+                          style={{
+                            fontSize: 10,
+                            color: C.estribor,
+                            border: `1px solid ${C.estribor}`,
+                            padding: "1px 5px",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          nueva
+                        </span>
+                      )}
+                    </div>
+
+                    {o.watchlist && (
+                      <p style={{ fontSize: 12, color: C.babor, marginTop: 3 }}>
+                        Barco de tu lista · ya navegaste aquí
+                      </p>
+                    )}
+
+                    <p style={{ fontSize: 13, marginTop: 4, color: C.tinta }}>
+                      {o.barco && (
+                        <em style={{ fontFamily: serif, fontSize: 14 }}>{o.barco}</em>
+                      )}
+                      {o.barco && " · "}
+                      {[
+                        o.eslora ? `${o.eslora} m` : null,
+                        etiqueta(TIPOS, o.tipo),
+                        o.bandera,
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </p>
+
+                    <p style={{ fontSize: 13, color: C.suave, marginTop: 2 }}>
+                      {[
+                        o.puerto,
+                        etiqueta(DURACIONES, o.duracion),
+                        alojamientoTexto(o.alojamiento),
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </p>
+
+                    <div className="mt-2 flex items-baseline justify-between gap-2">
+                      <span
+                        style={{
+                          fontSize: 15,
+                          fontWeight: 600,
+                          fontVariantNumeric: "tabular-nums",
+                          color: o.salarioMin ? C.tinta : C.suave,
+                        }}
+                      >
+                        {o.salarioMin
+                          ? `${o.salarioMin.toLocaleString("es-ES")} €/${
+                              o.periodo === "dia" ? "día" : "mes"
+                            }`
+                          : "salario no indicado"}
+                      </span>
+                      <span
+                        style={{ fontSize: 11, color: C.suave, whiteSpace: "nowrap" }}
+                      >
+                        {o.fuente} · {antig(horas)}
+                      </span>
+                    </div>
+
+                    {o.motivo && (
+                      <p style={{ fontSize: 12, color: C.sonda, marginTop: 6 }}>
+                        {o.motivo}
+                      </p>
+                    )}
+
+                    {(o.eng1 || o.pb2) && (
+                      <p style={{ fontSize: 12, color: C.babor, marginTop: 4 }}>
+                        Te falta:{" "}
+                        {[o.eng1 && "ENG1", o.pb2 && "Powerboat 2"]
+                          .filter(Boolean)
+                          .join(" y ")}
+                      </p>
+                    )}
+
+                    {m.estado === "aplicada" && m.aplicadaEn && (
+                      <p style={{ fontSize: 12, color: C.suave, marginTop: 4 }}>
+                        {textoAplicada(diasDesde(m.aplicadaEn))}
+                      </p>
+                    )}
+
+                    {m.estado === "descartada" && m.motivoDescarte && (
+                      <p style={{ fontSize: 12, color: C.suave, marginTop: 4 }}>
+                        Descartada por {m.motivoDescarte}.
+                      </p>
+                    )}
+
+                    {m.notas && (
+                      <p
+                        style={{
+                          fontSize: 12,
+                          marginTop: 8,
+                          padding: "6px 8px",
+                          background: C.papel,
+                          borderLeft: `2px solid ${C.arena}`,
+                        }}
+                      >
+                        {m.notas}
+                      </p>
+                    )}
+
+                    {notaAbierta === o.id && (
+                      <textarea
+                        autoFocus
+                        rows={2}
+                        defaultValue={m.notas ?? ""}
+                        placeholder="Hablé con el capitán, quedamos en marzo…"
+                        onBlur={(e) => escribirNota(o.id, e.target.value)}
+                        className="mt-2 w-full p-2"
+                        style={{
+                          fontSize: 13,
+                          border: `1px solid ${C.linea}`,
+                          background: C.papel,
+                        }}
+                      />
+                    )}
+
+                    {descartando === o.id && (
+                      <div className="mt-3">
+                        <p style={{ fontSize: 12, color: C.suave, marginBottom: 6 }}>
+                          ¿Por qué la descartas?
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {MOTIVOS_DESCARTE.map((motivo) => (
+                            <Chip key={motivo} click={() => descartar(o.id, motivo)}>
+                              {motivo}
+                            </Chip>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div
+                    className="flex"
+                    style={{ borderTop: `1px solid ${C.linea}`, fontSize: 12 }}
+                  >
+                    <Accion
+                      on={m.estado === "guardada"}
+                      click={() =>
+                        cambiar(o.id, m.estado === "guardada" ? "nueva" : "guardada")
+                      }
+                    >
+                      Guardar
+                    </Accion>
+                    <Accion
+                      on={m.estado === "aplicada"}
+                      click={() => cambiar(o.id, "aplicada")}
+                    >
+                      Apliqué
+                    </Accion>
+                    <Accion
+                      click={() => setNotaAbierta(notaAbierta === o.id ? null : o.id)}
+                    >
+                      Nota
+                    </Accion>
+                    {m.estado === "descartada" ? (
+                      <Accion click={() => cambiar(o.id, "nueva")}>Recuperar</Accion>
+                    ) : (
+                      <Accion
+                        color={C.babor}
+                        click={() => setDescartando(descartando === o.id ? null : o.id)}
+                      >
+                        Descartar
+                      </Accion>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+
+        <footer
+          className="mt-8 px-3 py-3"
+          style={{ background: C.papelAlt, fontSize: 12, color: C.suave }}
+        >
+          <p style={{ color: C.tinta, fontWeight: 600, marginBottom: 4 }}>
+            Lo que dice el histórico
+          </p>
+          {pedianEng1 > 0 ? (
+            <p>
+              {pedianEng1} ofertas de este trimestre pedían ENG1. Es el título que
+              más puertas te está cerrando.
+            </p>
+          ) : (
+            <p>Todavía no hay histórico suficiente para decir nada.</p>
+          )}
+        </footer>
+      </main>
+    </div>
+  );
+}
+
+function Grupo({ titulo, children }: { titulo: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-4">
+      <p style={{ fontSize: 12, color: C.suave, marginBottom: 6 }}>{titulo}</p>
+      <div className="flex flex-wrap gap-2">{children}</div>
+    </div>
+  );
+}
+
+function Chip({
+  on,
+  click,
+  children,
+}: {
+  on?: boolean;
+  click: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={click}
+      className="px-3 py-1"
+      style={{
+        fontSize: 13,
+        background: on ? C.tinta : "transparent",
+        color: on ? C.papel : C.tinta,
+        border: `1px solid ${on ? C.tinta : C.linea}`,
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
+function Accion({
+  on,
+  click,
+  color,
+  children,
+}: {
+  on?: boolean;
+  click: () => void;
+  color?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      onClick={click}
+      className="flex-1 py-2"
+      style={{
+        color: on ? C.papel : color || C.sonda,
+        background: on ? C.sonda : "transparent",
+        borderRight: `1px solid ${C.linea}`,
+      }}
+    >
+      {children}
+    </button>
+  );
+}

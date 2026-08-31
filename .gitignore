@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+.env*.local
+next-env.d.ts
+.claude/
+
+# Privado: no entra en el repositorio, que es publico.
+# Aqui viven el nombre completo, los telefonos de los capitanes y las
+# notas del proyecto. Se quedan en el ordenador y nada mas.
+docs/
+referencia/
+CLAUDE.md
+COMO USARLO.md
+schema.sql
+semilla.sql
+tsconfig.tsbuildinfo
