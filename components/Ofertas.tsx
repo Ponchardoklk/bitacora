@@ -10,6 +10,7 @@ import {
   PUBLICADAS,
   TIPOS,
   ZONAS,
+  enlaceFuente,
   etiqueta,
   sans,
   serif,
@@ -62,6 +63,7 @@ const alojamientoTexto = (a: string | null) =>
 export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
   const [perfil, setPerfil] = useState<string>("embarque");
   const [marcas, setMarcas] = useState<Marcas>({});
+  const [sinVerAlEntrar, setSinVerAlEntrar] = useState<Set<string>>(new Set());
   const [abrirFiltros, setAbrirFiltros] = useState(false);
   const [notaAbierta, setNotaAbierta] = useState<string | null>(null);
   const [descartando, setDescartando] = useState<string | null>(null);
@@ -73,7 +75,15 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
   const f = todos[perfil];
 
   // Todo lo que ella marca vive en su móvil, no en ningún servidor.
-  useEffect(() => setMarcas(leerMarcas()), []);
+  // El "sin ver" se congela al entrar: la etiqueta "nueva" dura toda la
+  // visita aunque por debajo ya se hayan dado por vistas.
+  useEffect(() => {
+    const guardadas = leerMarcas();
+    setMarcas(guardadas);
+    setSinVerAlEntrar(
+      new Set(ofertas.filter((o) => !guardadas[o.id]?.vista).map((o) => o.id))
+    );
+  }, [ofertas]);
 
   // Los filtros se guardan por perfil entre sesiones.
   useEffect(() => {
@@ -194,7 +204,7 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
   }, [lista]);
 
   const sinVer = ofertas.filter(
-    (o) => o.perfil === perfil && !marca(o.id).vista
+    (o) => o.perfil === perfil && sinVerAlEntrar.has(o.id)
   ).length;
 
   const activos =
@@ -231,8 +241,11 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
       style={{ background: C.papel, fontFamily: sans, color: C.tinta }}
     >
       {/* Cabecera */}
-      <header className="sticky top-0 z-20" style={{ background: C.tinta, color: C.papel }}>
-        <div className="px-4 pt-4 pb-3">
+      <header
+        className="zona-segura sticky top-0 z-20"
+        style={{ background: C.tinta, color: C.papel }}
+      >
+        <div className="contenedor px-4 pt-4 pb-3">
           <div className="flex items-baseline justify-between">
             <h1 style={{ fontFamily: serif, fontSize: 22, letterSpacing: "0.01em" }}>
               Cuaderno de bitácora
@@ -259,29 +272,32 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
           </div>
         </div>
 
-        <div
-          className="flex items-center justify-between px-4 py-2"
-          style={{ background: C.sonda, fontSize: 13 }}
-        >
-          <span>
-            <strong style={{ fontVariantNumeric: "tabular-nums" }}>{sinVer}</strong> sin
-            ver · {lista.length} en pantalla
-          </span>
-          <button
-            onClick={() => setAbrirFiltros((v) => !v)}
-            style={{ color: C.papel, textDecoration: "underline" }}
+        <div style={{ background: C.sonda }}>
+          <div
+            className="contenedor flex items-center justify-between px-4 py-2"
+            style={{ fontSize: 13 }}
           >
-            Filtros{activos ? ` (${activos})` : ""}
-          </button>
+            <span>
+              <strong style={{ fontVariantNumeric: "tabular-nums" }}>{sinVer}</strong>{" "}
+              sin ver · {lista.length} en pantalla
+            </span>
+            <button
+              onClick={() => setAbrirFiltros((v) => !v)}
+              className="py-1"
+              style={{ color: C.papel, textDecoration: "underline" }}
+            >
+              Filtros{activos ? ` (${activos})` : ""}
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Filtros */}
       {abrirFiltros && (
         <section
-          className="px-4 py-4"
           style={{ background: C.papelAlt, borderBottom: `1px solid ${C.linea}` }}
         >
+          <div className="contenedor px-4 py-4 md:grid md:grid-cols-2 md:gap-x-8">
           <Grupo titulo="Zona">
             {ZONAS.map(([k, l]) => (
               <Chip key={k} on={f.zonas.includes(k)} click={() => toggle("zonas", k)}>
@@ -370,34 +386,38 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
 
           <button
             onClick={() => setTodos((p) => ({ ...p, [perfil]: filtrosPorDefecto() }))}
+            className="py-2 text-left"
             style={{ fontSize: 12, color: C.sonda, textDecoration: "underline" }}
           >
             Dejar los filtros como estaban
           </button>
+          </div>
         </section>
       )}
 
       {/* Seguimiento */}
       {aviso && (
-        <div
-          className="mx-4 mt-4 px-3 py-2"
-          style={{
-            background: C.papelAlt,
-            borderLeft: `3px solid ${C.arena}`,
-            fontSize: 13,
-          }}
-        >
-          Aplicaste a{" "}
-          <em style={{ fontFamily: serif }}>
-            {aviso.oferta.barco ?? aviso.oferta.puesto}
-          </em>{" "}
-          hace {diasDesde(aviso.m.aplicadaEn!)} días y no hay respuesta. Toca
-          insistir.
+        <div className="contenedor px-4">
+          <div
+            className="mt-4 px-3 py-2"
+            style={{
+              background: C.papelAlt,
+              borderLeft: `3px solid ${C.arena}`,
+              fontSize: 13,
+            }}
+          >
+            Aplicaste a{" "}
+            <em style={{ fontFamily: serif }}>
+              {aviso.oferta.barco ?? aviso.oferta.puesto}
+            </em>{" "}
+            hace {diasDesde(aviso.m.aplicadaEn!)} días y no hay respuesta. Toca
+            insistir.
+          </div>
         </div>
       )}
 
       {/* Lista */}
-      <main className="px-4 pt-4">
+      <main className="contenedor px-4 pt-4">
         {lista.length === 0 ? (
           <div className="py-16 text-center" style={{ color: C.suave }}>
             <p style={{ fontFamily: serif, fontSize: 17, color: C.tinta }}>
@@ -408,7 +428,7 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
             </p>
           </div>
         ) : (
-          <ul className="space-y-3">
+          <ul className="grid items-start gap-3 md:grid-cols-2">
             {lista.map((o) => {
               const m = marca(o.id);
               const horas = horasDesde(o.publicada);
@@ -428,7 +448,7 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                       <h2 style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.3 }}>
                         {o.puesto}
                       </h2>
-                      {!m.vista && (
+                      {sinVerAlEntrar.has(o.id) && (
                         <span
                           style={{
                             fontSize: 10,
@@ -489,9 +509,26 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                           : "salario no indicado"}
                       </span>
                       <span
-                        style={{ fontSize: 11, color: C.suave, whiteSpace: "nowrap" }}
+                        style={{ fontSize: 12, color: C.suave, whiteSpace: "nowrap" }}
                       >
-                        {o.fuente} · {antig(horas)}
+                        {enlaceFuente(o.fuente, o.url) ? (
+                          <a
+                            href={enlaceFuente(o.fuente, o.url)!}
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{
+                              color: C.sonda,
+                              textDecoration: "underline",
+                              display: "inline-block",
+                              padding: "4px 2px",
+                            }}
+                          >
+                            {o.fuente} ↗
+                          </a>
+                        ) : (
+                          o.fuente
+                        )}{" "}
+                        · {antig(horas)}
                       </span>
                     </div>
 
@@ -650,7 +687,7 @@ function Chip({
   return (
     <button
       onClick={click}
-      className="px-3 py-1"
+      className="px-3 py-2"
       style={{
         fontSize: 13,
         background: on ? C.tinta : "transparent",
@@ -677,7 +714,7 @@ function Accion({
   return (
     <button
       onClick={click}
-      className="flex-1 py-2"
+      className="flex-1 py-3"
       style={{
         color: on ? C.papel : color || C.sonda,
         background: on ? C.sonda : "transparent",

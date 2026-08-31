@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "semilla": "node scripts/semilla.mjs"
+    "semilla": "node scripts/semilla.mjs",
+    "iconos": "node scripts/icono.mjs"
   },
   "dependencies": {
     "next": "14.2.35",

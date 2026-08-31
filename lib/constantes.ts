@@ -74,3 +74,21 @@ export const etiqueta = (lista: [string, string][], clave: string | null) =>
 // hay aquí ningún dato personal: las notas de ella no salen del móvil.
 export const PIN_ACCESO = "1927";
 export const CLAVE_ACCESO = "bitacora:acceso";
+
+// De donde sale cada oferta. Cuando el scraper traiga el enlace exacto
+// se usa ese; mientras tanto, la web del portal, para que siempre se
+// pueda ir a mirar la fuente.
+export const WEBS_FUENTE: Record<string, string> = {
+  "Emplea Náutica": "https://www.empleanautica.com",
+  "Jobs&Sea": "https://www.jobsandsea.com",
+  "Noticias Marinas": "https://www.noticiasmarinas.com/empleo",
+  InfoJobs: "https://www.infojobs.net",
+  Daywork123: "https://www.daywork123.com",
+  Bluewater: "https://www.bluewateryachting.com",
+  Yotspot: "https://www.yotspot.com",
+};
+
+export const enlaceFuente = (fuente: string, url: string | null) =>
+  url ?? WEBS_FUENTE[fuente] ?? null;
+
+export const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

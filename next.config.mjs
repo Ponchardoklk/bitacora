@@ -10,6 +10,8 @@ const nextConfig = {
   basePath: enPages ? `/${repo}` : "",
   assetPrefix: enPages ? `/${repo}/` : "",
   images: { unoptimized: true },
+  // Para que el manifiesto y los iconos apunten al sitio correcto.
+  env: { NEXT_PUBLIC_BASE_PATH: enPages ? `/${repo}` : "" },
   trailingSlash: true,
 };
 
