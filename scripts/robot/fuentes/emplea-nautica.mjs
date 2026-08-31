@@ -24,7 +24,9 @@ export const nombre = "Emplea Náutica";
 
 // Tope de fichas por pasada. Las novedades de un día caben de sobra, y
 // así una racha de 500 no convierte la tarea en media hora de reintentos.
-const MAX_FICHAS = 12;
+// Su servidor falla como la mitad de las veces, de ahí que el corte por
+// fallos seguidos sea generoso: si fuera estricto no entraría ninguna.
+const MAX_FICHAS = 15;
 
 function tarjetas(html) {
   // Se parte por el comienzo de cada <li> de oferta: buscar el </li>
@@ -91,7 +93,7 @@ export async function buscar({ completas = new Set() } = {}) {
     // Se pide la ficha solo si la oferta puede interesarle y aún no
     // tenemos su texto. Si un día falla, mañana se vuelve a intentar.
     const merecePena =
-      pareceRelevante(t) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 4;
+      pareceRelevante(t) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 8;
 
     let detalle = null;
     if (merecePena) {
@@ -110,7 +112,7 @@ export async function buscar({ completas = new Set() } = {}) {
     });
   }
 
-  if (fallosSeguidos >= 4) {
+  if (fallosSeguidos >= 8) {
     console.warn("  su servidor está devolviendo 500; se deja para mañana");
   }
 

@@ -41,12 +41,18 @@ const idDe = (o) =>
     .digest("hex")
     .slice(0, 12);
 
-function normalizar(cruda, fechasPrevias) {
-  const todo = [cruda.puesto, cruda.empresa, cruda.lugar, cruda.categoria, cruda.salarioTexto, cruda.texto]
+function normalizar(cruda, previos) {
+  // Si esta pasada no ha podido leer la ficha pero ya la teníamos de
+  // otro día, se usa la de antes. Sin esto, el robot iría perdiendo
+  // información en vez de acumularla: cada pasada borraría el texto que
+  // consiguió la anterior, y con él la eslora y el salario.
+  const texto = cruda.texto || previos.textos.get(cruda.url) || "";
+
+  const todo = [cruda.puesto, cruda.empresa, cruda.lugar, cruda.categoria, cruda.salarioTexto, texto]
     .filter(Boolean)
     .join("\n");
 
-  const sal = extraer.salario(`${cruda.salarioTexto || ""}\n${cruda.texto || ""}`);
+  const sal = extraer.salario(`${cruda.salarioTexto || ""}\n${texto}`);
 
   const oferta = {
     puesto: cruda.puesto.trim(),
@@ -65,12 +71,12 @@ function normalizar(cruda, fechasPrevias) {
     pb2: extraer.pidePb2(todo),
     fuente: cruda.fuente,
     url: cruda.url,
-    publicada: cruda.fecha ?? fechasPrevias.get(cruda.url) ?? new Date().toISOString(),
+    publicada: cruda.fecha ?? previos.fechas.get(cruda.url) ?? new Date().toISOString(),
     // Muchos anuncios solo dan la fecha en su ficha, y la ficha no
     // siempre se puede leer. Mientras no se sepa, se marca: así mañana
     // se corrige en vez de quedarse una fecha inventada para siempre.
-    fechaFiable: Boolean(cruda.fecha),
-    texto: (cruda.texto || cruda.puesto).slice(0, 1500),
+    fechaFiable: Boolean(cruda.fecha) || previos.fiables.has(cruda.url),
+    texto: (texto || cruda.puesto).slice(0, 1500),
     categoria: cruda.categoria || null,
   };
 
@@ -103,9 +109,13 @@ async function principal() {
   const completas = new Set(
     previo.ofertas.filter((o) => o.texto && o.texto.length > 120).map((o) => o.url)
   );
-  const fechasPrevias = new Map(
-    previo.ofertas.filter((o) => o.url).map((o) => [o.url, o.publicada])
-  );
+  const previos = {
+    textos: new Map(
+      previo.ofertas.filter((o) => o.url && o.texto).map((o) => [o.url, o.texto])
+    ),
+    fechas: new Map(previo.ofertas.filter((o) => o.url).map((o) => [o.url, o.publicada])),
+    fiables: new Set(previo.ofertas.filter((o) => o.url && o.fechaFiable).map((o) => o.url)),
+  };
 
   let encontradas = [];
 
@@ -113,7 +123,7 @@ async function principal() {
     console.log(`\n· ${fuente.nombre}`);
     try {
       const crudas = await fuente.buscar({ completas });
-      const utiles = crudas.map((c) => normalizar(c, fechasPrevias)).filter(Boolean);
+      const utiles = crudas.map((c) => normalizar(c, previos)).filter(Boolean);
       console.log(`  ${crudas.length} leídas, ${utiles.length} son para ella`);
       encontradas.push(...utiles);
       salud[fuente.nombre] = {
