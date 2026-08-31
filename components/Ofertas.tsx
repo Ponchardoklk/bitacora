@@ -689,13 +689,22 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
           <p style={{ color: C.tinta, fontWeight: 600, marginBottom: 4 }}>
             Lo que dice el histórico
           </p>
-          {bloqueos[0] ? (
+          {/* Con dos o tres ofertas no se puede concluir nada, y decir
+              que un título "te cierra puertas" sería exagerado. */}
+          {!bloqueos[0] ? (
+            <p>Todavía no hay histórico suficiente para decir nada.</p>
+          ) : bloqueos[0].n >= 3 ? (
             <p>
               {bloqueos[0].n} ofertas de este trimestre pedían {bloqueos[0].titulo}.
               Es el título que más puertas te está cerrando.
             </p>
           ) : (
-            <p>Todavía no hay histórico suficiente para decir nada.</p>
+            <p>
+              {bloqueos[0].n === 1
+                ? `1 oferta de este trimestre pedía ${bloqueos[0].titulo}`
+                : `${bloqueos[0].n} ofertas de este trimestre pedían ${bloqueos[0].titulo}`}
+              . Todavía son pocas para sacar conclusiones.
+            </p>
           )}
         </footer>
       </main>
