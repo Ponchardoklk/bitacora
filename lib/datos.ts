@@ -3,6 +3,7 @@ export interface Oferta {
   perfil: string;
   puesto: string;
   barco: string | null;
+  empresa: string | null;
   eslora: number | null;
   tipo: string | null;
   bandera: string | null;
@@ -21,6 +22,12 @@ export interface Oferta {
   watchlist: string | null;
   texto: string;
   url: string | null;
+  // Muchos portales solo dan la fecha dentro de la ficha. Mientras no se
+  // haya podido leer, la antigüedad no se enseña: más vale un hueco que
+  // un "hace 2 h" que no es verdad.
+  fechaFiable?: boolean;
+  // Las de prueba de la Fase 1. El robot las quita en cuanto trae reales.
+  demo?: boolean;
 }
 
 // Lo que ella marca. Vive solo en su móvil: nunca sale de ahí ni llega

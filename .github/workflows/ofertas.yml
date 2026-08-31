@@ -1,0 +1,63 @@
+name: Buscar ofertas
+
+# Una vez al día, antes de que ella mire el iPad por la mañana.
+# 05:00 UTC son las 07:00 en España en verano y las 06:00 en invierno.
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Entrar en los portales
+        run: node scripts/robot/index.mjs
+
+      - name: Guardar lo que haya salido
+        run: |
+          if git diff --quiet -- datos/ofertas.json; then
+            echo "Sin novedades hoy."
+          else
+            git config user.name "robot de bitácora"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add datos/ofertas.json
+            git commit -m "Ofertas del $(date +%d/%m/%Y)"
+            git push
+          fi
+
+      # Se reconstruye siempre, haya novedades o no: es gratis y así la
+      # web nunca se queda por detrás del fichero de ofertas.
+      - uses: actions/configure-pages@v5
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  desplegar:
+    needs: buscar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.desplegar.outputs.page_url }}
+    steps:
+      - id: desplegar
+        uses: actions/deploy-pages@v4

@@ -168,6 +168,9 @@ const ofertas = OFERTAS.map((fila) => {
   o.publicada = hace(o.horas);
   delete o.horas;
   o.url = null;
+  o.empresa = null;
+  // De prueba: el robot las quita en cuanto trae ofertas reales.
+  o.demo = true;
   return o;
 });
 

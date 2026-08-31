@@ -177,9 +177,14 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
         )
         .filter((o) => f.estados.includes(marca(o.id).estado))
         .filter((o) => (f.dias ? horasDesde(o.publicada) <= f.dias * 24 : true))
+        // El encaje manda; la antigüedad solo desempata. Las que aún no
+        // tienen fecha confirmada van detrás de las que sí: no se las
+        // premia por parecer recién salidas.
         .sort(
           (a, b) =>
-            b.score - a.score || horasDesde(a.publicada) - horasDesde(b.publicada)
+            b.score - a.score ||
+            Number(a.fechaFiable === false) - Number(b.fechaFiable === false) ||
+            horasDesde(a.publicada) - horasDesde(b.publicada)
         ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [ofertas, perfil, f, marcas]
@@ -469,19 +474,34 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                       </p>
                     )}
 
-                    <p style={{ fontSize: 13, marginTop: 4, color: C.tinta }}>
-                      {o.barco && (
-                        <em style={{ fontFamily: serif, fontSize: 14 }}>{o.barco}</em>
-                      )}
-                      {o.barco && " · "}
-                      {[
+                    {(() => {
+                      // Si no se sabe el nombre del barco, al menos quién
+                      // lo publica. Solo el barco va en cursiva.
+                      const detalles = [
                         o.eslora ? `${o.eslora} m` : null,
                         etiqueta(TIPOS, o.tipo),
                         o.bandera,
-                      ]
-                        .filter(Boolean)
-                        .join(" · ")}
-                    </p>
+                      ].filter(Boolean);
+                      // Algunos portales ponen el nombre de la empresa
+                      // como título del anuncio: no repetirlo debajo.
+                      const empresa =
+                        o.empresa && o.empresa.trim().toLowerCase() !== o.puesto.trim().toLowerCase()
+                          ? o.empresa
+                          : null;
+                      const cabeza = o.barco ?? empresa;
+                      if (!cabeza && detalles.length === 0) return null;
+                      return (
+                        <p style={{ fontSize: 13, marginTop: 4, color: C.tinta }}>
+                          {o.barco ? (
+                            <em style={{ fontFamily: serif, fontSize: 14 }}>{o.barco}</em>
+                          ) : (
+                            cabeza
+                          )}
+                          {cabeza && detalles.length > 0 && " · "}
+                          {detalles.join(" · ")}
+                        </p>
+                      );
+                    })()}
 
                     <p style={{ fontSize: 13, color: C.suave, marginTop: 2 }}>
                       {[
@@ -528,7 +548,7 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                         ) : (
                           o.fuente
                         )}{" "}
-                        · {antig(horas)}
+                        · {o.fechaFiable === false ? "sin fecha" : antig(horas)}
                       </span>
                     </div>
 
