@@ -5,7 +5,7 @@
 // Alguna ficha suelta devuelve un 500 en su servidor. Está previsto:
 // la oferta entra igual con lo que traía la tarjeta.
 import { bajar, capturar, respirar, texto } from "../html.mjs";
-import { pareceRelevante } from "../puntuar.mjs";
+import { fueraDeSuAlcance, pareceRelevante } from "../puntuar.mjs";
 
 const RAIZ = "https://www.jobsandsea.com";
 const PAGINAS = [`${RAIZ}/job?limit=60&orderby=new`, `${RAIZ}/job?limit=60&orderby=new&page=2`];
@@ -73,7 +73,7 @@ export async function buscar({ completas = new Set() } = {}) {
 
   for (const t of vistas.values()) {
     const merecePena =
-      pareceRelevante(t) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 5;
+      pareceRelevante(t) && !fueraDeSuAlcance(t.puesto) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 5;
 
     let detalle = null;
     if (merecePena) {

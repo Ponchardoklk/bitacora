@@ -25,14 +25,37 @@ const hay = (t, lista) =>
     new RegExp(`(^|[^a-z0-9])${escapar(sinTildes(p))}(s|es|a|as)?([^a-z0-9]|$)`).test(t)
   );
 
-// ¿Le piden un título que no tiene? Entonces no es una oferta para ella,
-// por bien que encaje en todo lo demás. Si el anuncio acepta además uno
-// de los suyos ("patrón portuario o PPER"), sí puede presentarse.
-export function fueraDeSuAlcance(texto) {
+const COMO_SE_ESCRIBE = {
+  pper: "PPER",
+  "patron profesional": "PPER",
+  "patron de yate": "Patrón de yate",
+  "patron de altura": "Patrón de altura",
+  "capitan de yate": "Capitán de yate",
+  capitan: "título de capitán",
+  captain: "título de capitán",
+  "capitan de la marina mercante": "capitán de la marina mercante",
+  "primer oficial": "primer oficial",
+  "oficial de puente": "oficial de puente",
+  piloto: "piloto",
+  "jefe de maquinas": "jefe de máquinas",
+  "patron de pesca": "patrón de pesca",
+};
+
+// ¿Le piden un título que no tiene? Devuelve cuál, o null si puede
+// presentarse. Si el anuncio acepta además uno de los suyos ("patrón
+// portuario o PPER"), sí puede.
+//
+// Estas ofertas no se le enseñan, pero tampoco se tiran: contarlas es lo
+// único que puede decirle si le compensa sacarse el PPER.
+export function tituloQueLeFalta(texto) {
   const t = sinTildes(texto);
-  if (!hay(t, TITULOS_QUE_NO_TIENE)) return false;
-  return !hay(t, TITULOS_QUE_TIENE);
+  const pedido = TITULOS_QUE_NO_TIENE.find((p) => hay(t, [p]));
+  if (!pedido) return null;
+  if (hay(t, TITULOS_QUE_TIENE)) return null;
+  return COMO_SE_ESCRIBE[pedido] ?? pedido;
 }
+
+export const fueraDeSuAlcance = (texto) => tituloQueLeFalta(texto) !== null;
 
 export function watchlistHit(oferta) {
   const t = sinTildes(`${oferta.puesto} ${oferta.barco ?? ""} ${oferta.texto}`);
@@ -46,8 +69,6 @@ export function watchlistHit(oferta) {
 // sería castigar su servidor para nada, y encima acaban cortando.
 export function pareceRelevante({ puesto = "", categoria = "", empresa = "" }) {
   if (hay(sinTildes(`${puesto} ${empresa ?? ""}`), EXCLUIR)) return false;
-  // Si el propio título ya exige un papel que no tiene, ni se baja la ficha.
-  if (fueraDeSuAlcance(puesto)) return false;
   const todo = sinTildes(`${puesto} ${categoria ?? ""}`);
   return hay(todo, PERFILES.barcelona.puestos) || hay(todo, PERFILES.embarque.puestos);
 }
@@ -144,9 +165,8 @@ export function puntuar(oferta) {
   const perfil = perfilDe(oferta);
   if (!perfil) return null;
 
-  // Con el texto completo delante, segunda comprobación: el requisito
-  // suele estar en el cuerpo del anuncio, no en el titular.
-  if (fueraDeSuAlcance(`${oferta.puesto} ${oferta.texto ?? ""}`)) return null;
+  // No se le enseña, pero se guarda marcada y contada.
+  const fueraDeAlcance = tituloQueLeFalta(`${oferta.puesto} ${oferta.texto ?? ""}`);
 
   const watchlist = watchlistHit(oferta);
   const { nota, razones } =
@@ -161,6 +181,7 @@ export function puntuar(oferta) {
       score: 10,
       motivo: `Barco de tu lista: ya navegaste en el ${watchlist}`,
       watchlist,
+      fueraDeAlcance,
     };
   }
 
@@ -169,6 +190,7 @@ export function puntuar(oferta) {
     score: Math.max(0, Math.min(10, Math.round(final))),
     motivo: razones.join(", ").replace(/^./, (c) => c.toUpperCase()),
     watchlist: null,
+    fueraDeAlcance,
   };
 }
 

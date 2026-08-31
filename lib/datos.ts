@@ -26,6 +26,10 @@ export interface Oferta {
   // haya podido leer, la antigüedad no se enseña: más vale un hueco que
   // un "hace 2 h" que no es verdad.
   fechaFiable?: boolean;
+  // Le piden un título que no tiene (PPER, capitán de yate...). No se le
+  // enseña, pero se guarda para poder contarle cuántas puertas le cierra
+  // cada papel que le falta.
+  fueraDeAlcance?: string | null;
   // Las de prueba de la Fase 1. El robot las quita en cuanto trae reales.
   demo?: boolean;
 }

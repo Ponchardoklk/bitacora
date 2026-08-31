@@ -162,6 +162,9 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
     () =>
       ofertas
         .filter((o) => o.perfil === perfil)
+        // Si le piden un título que no tiene, no puede presentarse: no se
+        // le enseña. Sigue en el histórico y cuenta para el pie.
+        .filter((o) => !o.fueraDeAlcance)
         .filter((o) => (f.zonas.length ? f.zonas.includes(o.zona ?? "") : true))
         .filter((o) => (f.tipos.length ? f.tipos.includes(o.tipo ?? "") : true))
         .filter((o) =>
@@ -209,7 +212,7 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
   }, [lista]);
 
   const sinVer = ofertas.filter(
-    (o) => o.perfil === perfil && sinVerAlEntrar.has(o.id)
+    (o) => o.perfil === perfil && !o.fueraDeAlcance && sinVerAlEntrar.has(o.id)
   ).length;
 
   const activos =
@@ -236,9 +239,23 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ofertas, perfil, marcas]);
 
-  const pedianEng1 = ofertas.filter(
-    (o) => o.eng1 && horasDesde(o.publicada) <= 90 * 24
-  ).length;
+  // Qué papel le cierra más puertas. Cuenta los tres tipos: los que se
+  // sacan en una semana (ENG1, Powerboat 2) y los que son un curso entero
+  // (PPER, capitán de yate), que además ni le aparecen en la lista.
+  const bloqueos = useMemo(() => {
+    const trimestre = ofertas.filter((o) => horasDesde(o.publicada) <= 90 * 24);
+    const cuenta: Record<string, number> = {};
+    const sumar = (titulo: string) => (cuenta[titulo] = (cuenta[titulo] ?? 0) + 1);
+
+    for (const o of trimestre) {
+      if (o.eng1) sumar("ENG1");
+      if (o.pb2) sumar("Powerboat 2");
+      if (o.fueraDeAlcance) sumar(o.fueraDeAlcance);
+    }
+    return Object.entries(cuenta)
+      .map(([titulo, n]) => ({ titulo, n }))
+      .sort((a, b) => b.n - a.n);
+  }, [ofertas]);
 
   return (
     <div
@@ -672,10 +689,10 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
           <p style={{ color: C.tinta, fontWeight: 600, marginBottom: 4 }}>
             Lo que dice el histórico
           </p>
-          {pedianEng1 > 0 ? (
+          {bloqueos[0] ? (
             <p>
-              {pedianEng1} ofertas de este trimestre pedían ENG1. Es el título que
-              más puertas te está cerrando.
+              {bloqueos[0].n} ofertas de este trimestre pedían {bloqueos[0].titulo}.
+              Es el título que más puertas te está cerrando.
             </p>
           ) : (
             <p>Todavía no hay histórico suficiente para decir nada.</p>

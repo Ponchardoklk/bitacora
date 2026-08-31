@@ -10,7 +10,7 @@
 //     categorías que le interesan a ella, y solo si el listado ha ido
 //     bien: si el sitio está caído, no se insiste.
 import { bajar, capturar, respirar, texto } from "../html.mjs";
-import { pareceRelevante } from "../puntuar.mjs";
+import { fueraDeSuAlcance, pareceRelevante } from "../puntuar.mjs";
 
 const RAIZ = "https://www.empleanautica.com";
 
@@ -96,7 +96,7 @@ export async function buscar({ completas = new Set() } = {}) {
     // Se pide la ficha solo si la oferta puede interesarle y aún no
     // tenemos su texto. Si un día falla, mañana se vuelve a intentar.
     const merecePena =
-      pareceRelevante(t) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 8;
+      pareceRelevante(t) && !fueraDeSuAlcance(t.puesto) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 8;
 
     let detalle = null;
     if (merecePena) {

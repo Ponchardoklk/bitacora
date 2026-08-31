@@ -1,23 +1,50 @@
 {
-  "actualizado": "2026-08-31T15:42:54.944Z",
+  "actualizado": "2026-08-31T15:52:59.876Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-08-31T15:41:56.995Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-08-31T15:52:02.618Z",
+      "leidas": 40,
+      "utiles": 24
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-08-31T15:42:37.274Z",
+      "ultimoCheck": "2026-08-31T15:52:42.548Z",
       "leidas": 85,
-      "utiles": 4
+      "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-08-31T15:42:54.939Z",
+      "ultimoCheck": "2026-08-31T15:52:59.870Z",
       "leidas": 17,
       "utiles": 7
     }
   },
   "ofertas": [
+    {
+      "id": "dd9576cc8a7e",
+      "puesto": "Patrón profesional para chárter semanal en Ibiza",
+      "empresa": "SALTEDHOLIDAYS SL",
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Ibiza",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "Emplea Náutica",
+      "url": "https://www.empleanautica.com/trabajo/saltedholidays-sl-ibiza-temporal-patron-profesional-para-charter-semanal-en-ibiza/",
+      "publicada": "2026-08-31T15:52:02.615Z",
+      "fechaFiable": false,
+      "texto": "Patrón profesional para chárter semanal en Ibiza",
+      "perfil": "embarque",
+      "score": 6,
+      "motivo": "Sin eslora indicada, temporada",
+      "watchlist": null,
+      "fueraDeAlcance": "PPER"
+    },
     {
       "id": "9fefed8dee4a",
       "puesto": "Buscamos patron de cabotaje",
@@ -42,7 +69,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "ac09a73c0dbe",
@@ -68,7 +96,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "a9c8782dddc7",
@@ -94,7 +123,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "14564b6bb19e",
@@ -120,7 +150,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "0f4b3f931228",
@@ -146,7 +177,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "d189f9d34f36",
@@ -172,7 +204,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "18e4af3fdaf8",
@@ -198,7 +231,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "a55a67b9d0fb",
@@ -224,7 +258,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "5100189893b3",
@@ -250,7 +285,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "59c8872caed1",
@@ -276,7 +312,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "e9020fc5479d",
@@ -302,7 +339,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "a1ed89483ce2",
@@ -328,7 +366,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "36cd246e6f97",
@@ -354,7 +393,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "b079c8337437",
@@ -380,7 +420,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "b9c1434754dd",
@@ -406,7 +447,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "73fb24726286",
@@ -432,7 +474,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "c6d879c40949",
@@ -458,7 +501,8 @@
       "perfil": "barcelona",
       "score": 9,
       "motivo": "Patrón en Port olimpic Barcelona, duermes en casa",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "a380959241ca",
@@ -484,7 +528,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "56536a2a4ed1",
@@ -510,7 +555,8 @@
       "perfil": "barcelona",
       "score": 6,
       "motivo": "Vilanova i la Geltru, duermes en casa",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "9772961ca2b4",
@@ -536,7 +582,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "ab4b71c9f38e",
@@ -562,7 +609,8 @@
       "perfil": "barcelona",
       "score": 6,
       "motivo": "Vilanova i la Geltrú (Barcelona), duermes en casa",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "b99847037b81",
@@ -588,7 +636,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "70d05bd00ce7",
@@ -614,7 +663,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "832e832bd387",
@@ -640,7 +690,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "fb7bc760b734",
@@ -666,7 +717,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "417719ffb7c2",
@@ -692,7 +744,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "aad2f59ad1d2",
@@ -718,7 +771,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "85ab7cd2cb80",
@@ -744,7 +798,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "37 m, por debajo de tu objetivo",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "1cbf4ea21b7f",
@@ -770,7 +825,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "7dd455e3aaa9",
@@ -796,7 +852,8 @@
       "perfil": "embarque",
       "score": 5,
       "motivo": "Sin eslora indicada, salario por debajo de referencia",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "0d34c7cc8157",
@@ -822,7 +879,8 @@
       "perfil": "barcelona",
       "score": 6,
       "motivo": "Vilanova i la Geltrú, duermes en casa",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "4f0285e0a27f",
@@ -848,7 +906,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "92da82d25c9f",
@@ -874,7 +933,35 @@
       "perfil": "embarque",
       "score": 5,
       "motivo": "Sin eslora indicada, salario por debajo de referencia",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "6cd3a1092151",
+      "puesto": "Skipper con PPER para excursiones en velero",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": "velero",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Menorca",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "Jobs&Sea",
+      "url": "https://www.jobsandsea.com/job/skipper-con-pper-para-excursiones-en-velero",
+      "publicada": "2026-05-18T09:00:00.000Z",
+      "fechaFiable": true,
+      "texto": "Skipper con PPER para excursiones en velero",
+      "perfil": "embarque",
+      "score": 6,
+      "motivo": "Vela, sin eslora indicada, temporada",
+      "watchlist": null,
+      "fueraDeAlcance": "PPER"
     },
     {
       "id": "3ac935563e3d",
@@ -884,23 +971,24 @@
       "eslora": null,
       "tipo": null,
       "bandera": null,
-      "zona": "espana",
+      "zona": "global",
       "puerto": null,
-      "duracion": "temporada",
+      "duracion": null,
       "alojamiento": "no_indicado",
       "salarioMin": null,
       "periodo": null,
       "eng1": false,
       "pb2": false,
       "fuente": "Emplea Náutica",
-      "url": "https://www.empleanautica.com/trabajo/excursions-maritimes-nuria-jornada-completa-patron-patrona-para-barca-de-pasaje/",
+      "url": "https://www.empleanautica.com/trabajo/excursions-maritimes-nuria-jornada-completa-patron-patrona-para-barca-de-pasaje-de-marzo-a-noviembre/",
       "publicada": "2026-04-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Patrón/ona para barca de pasaje de 9 metros, con capacidad para 20 pasajeros, dedicada a realizar excursiones marítimas de 1h45min en un parque natural en la Costa Brava (Girona). Jornada intensiva en turno de tarde.\n\nTrabajo fijo discontinuo. Inicialmente para la temporada 2026, con posibilidad de alargar 9 meses la próxima temporada.\n\nRequisitos:\n\n– título de patrón portuario\n\n– certificado de buques de pasaje\n\n– buen trato con la gente\n\n¡Muchas gracias!\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 65 jobs",
+      "texto": "Patrón/patrona para barca de pasaje",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "motivo": "Sin eslora indicada",
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "7a21536f45b0",
@@ -926,7 +1014,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "824e108ebbdb",
@@ -952,7 +1041,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "bdf36aecce7f",
@@ -978,7 +1068,8 @@
       "perfil": "embarque",
       "score": 4,
       "motivo": "Solo 15 m",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "d53cdb1374cb",
@@ -1004,7 +1095,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "a899ed43241f",
@@ -1030,7 +1122,8 @@
       "perfil": "embarque",
       "score": 5,
       "motivo": "Sin eslora indicada, salario por debajo de referencia",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "4aa134e6a1f3",
@@ -1056,7 +1149,8 @@
       "perfil": "embarque",
       "score": 5,
       "motivo": "Sin eslora indicada, salario por debajo de referencia, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "d486840bda79",
@@ -1082,7 +1176,8 @@
       "perfil": "embarque",
       "score": 5,
       "motivo": "Sin eslora indicada, salario por debajo de referencia, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "5019e7215172",
@@ -1108,7 +1203,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     },
     {
       "id": "0f260966f9d4",
@@ -1134,7 +1230,8 @@
       "perfil": "embarque",
       "score": 6,
       "motivo": "Sin eslora indicada, temporada",
-      "watchlist": null
+      "watchlist": null,
+      "fueraDeAlcance": null
     }
   ]
 }
