@@ -8,28 +8,46 @@
 import {
   EXCLUIR,
   PERFILES,
-  SOBRECUALIFICADO,
+  TITULOS_QUE_NO_TIENE,
+  TITULOS_QUE_TIENE,
   WATCHLIST,
   ZONA_BARCELONA,
 } from "./perfiles.mjs";
 import { sinTildes } from "./extraer.mjs";
 
-const hay = (t, lista) => lista.some((p) => t.includes(sinTildes(p)));
+const escapar = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+// Palabra entera, no trozo de palabra. Buscando "patrón" a lo bruto
+// salían ofertas de patronaje de vestidos de novia, porque "patronista"
+// contiene "patron".
+const hay = (t, lista) =>
+  lista.some((p) =>
+    new RegExp(`(^|[^a-z0-9])${escapar(sinTildes(p))}(s|es|a|as)?([^a-z0-9]|$)`).test(t)
+  );
+
+// ¿Le piden un título que no tiene? Entonces no es una oferta para ella,
+// por bien que encaje en todo lo demás. Si el anuncio acepta además uno
+// de los suyos ("patrón portuario o PPER"), sí puede presentarse.
+export function fueraDeSuAlcance(texto) {
+  const t = sinTildes(texto);
+  if (!hay(t, TITULOS_QUE_NO_TIENE)) return false;
+  return !hay(t, TITULOS_QUE_TIENE);
+}
 
 export function watchlistHit(oferta) {
   const t = sinTildes(`${oferta.puesto} ${oferta.barco ?? ""} ${oferta.texto}`);
   return WATCHLIST.find((w) => w.alias.some((a) => t.includes(a)))?.barco ?? null;
 }
 
-// Primer filtro: ¿esto es siquiera un puesto de cubierta o de patrón?
-// Lo que no pasa de aquí no entra en el histórico. Es el único punto
-// donde se descarta algo, y a propósito: el resto lo ordena la nota.
-// La criba, solo con lo que ya trae la tarjeta del listado. Se usa
+// La criba: ¿esto es siquiera un puesto de cubierta o de patrón, y puede
+// ella presentarse? Solo con lo que ya trae la tarjeta del listado. Se usa
 // antes de bajar ninguna ficha: de cada diez anuncios de estos portales,
 // ocho son de moto de agua o de sala de máquinas. Pedirles la ficha
 // sería castigar su servidor para nada, y encima acaban cortando.
 export function pareceRelevante({ puesto = "", categoria = "", empresa = "" }) {
   if (hay(sinTildes(`${puesto} ${empresa ?? ""}`), EXCLUIR)) return false;
+  // Si el propio título ya exige un papel que no tiene, ni se baja la ficha.
+  if (fueraDeSuAlcance(puesto)) return false;
   const todo = sinTildes(`${puesto} ${categoria ?? ""}`);
   return hay(todo, PERFILES.barcelona.puestos) || hay(todo, PERFILES.embarque.puestos);
 }
@@ -126,17 +144,15 @@ export function puntuar(oferta) {
   const perfil = perfilDe(oferta);
   if (!perfil) return null;
 
+  // Con el texto completo delante, segunda comprobación: el requisito
+  // suele estar en el cuerpo del anuncio, no en el titular.
+  if (fueraDeSuAlcance(`${oferta.puesto} ${oferta.texto ?? ""}`)) return null;
+
   const watchlist = watchlistHit(oferta);
   const { nota, razones } =
     perfil === "embarque" ? puntuarEmbarque(oferta) : puntuarBarcelona(oferta);
 
-  let final = nota;
-
-  // Piden más titulación de la que tiene.
-  if (hay(sinTildes(oferta.puesto), SOBRECUALIFICADO)) {
-    final -= 3;
-    razones.push("piden más titulación de la que tienes");
-  }
+  const final = nota;
 
   // Un barco donde ya ha navegado va primero, pase lo que pase.
   if (watchlist) {

@@ -15,10 +15,11 @@ import path from "node:path";
 
 import * as empleaNautica from "./fuentes/emplea-nautica.mjs";
 import * as jobsAndSea from "./fuentes/jobs-and-sea.mjs";
+import * as infojobs from "./fuentes/infojobs.mjs";
 import * as extraer from "./extraer.mjs";
 import { puntuar } from "./puntuar.mjs";
 
-const FUENTES = [empleaNautica, jobsAndSea];
+const FUENTES = [empleaNautica, jobsAndSea, infojobs];
 const SECO = process.argv.includes("--seco");
 const FICHERO = path.join(process.cwd(), "datos", "ofertas.json");
 
@@ -163,6 +164,24 @@ async function principal() {
   }
 
   let ofertas = [...guardadas.values()];
+
+  // Se vuelven a pasar por las reglas también las que ya estaban. Sin
+  // esto, afinar la criba solo sirve para las ofertas de mañana y las de
+  // ayer se quedan dentro para siempre: así es como seguían saliendo
+  // ofertas que le piden el PPER, que ella no tiene.
+  const antesDeRevisar = ofertas.length;
+  ofertas = ofertas.filter((o) => {
+    const nota = puntuar(o);
+    if (!nota) return false;
+    Object.assign(o, nota); // y de paso se reajusta la nota
+    return true;
+  });
+  if (antesDeRevisar !== ofertas.length) {
+    console.log(
+      `\nFuera ${antesDeRevisar - ofertas.length} que ya no pasan la criba ` +
+        `(piden títulos que no tiene, o no son de cubierta).`
+    );
+  }
 
   // En cuanto hay material real, las de prueba sobran.
   const reales = ofertas.filter((o) => !o.demo).length;

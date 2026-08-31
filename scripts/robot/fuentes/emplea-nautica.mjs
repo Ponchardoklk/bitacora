@@ -14,8 +14,11 @@ import { pareceRelevante } from "../puntuar.mjs";
 
 const RAIZ = "https://www.empleanautica.com";
 
+// El listado general trae las 40 más recientes. Las categorías cubren lo
+// que se queda por debajo: son justo los tres títulos que ella tiene.
 const PAGINAS = [
   `${RAIZ}/empleo-nautico/`,
+  `${RAIZ}/categoria-trabajo/patron-portuario/`,
   `${RAIZ}/categoria-trabajo/marinero-de-puente/`,
   `${RAIZ}/categoria-trabajo/marinero-a/`,
 ];

@@ -56,11 +56,29 @@ export const EXCLUIR = [
   "marketing", "contable", "limpieza",
 ];
 
-// Piden más titulación de la que tiene: no descartan la oferta, pero la
-// hunden en la lista.
-export const SOBRECUALIFICADO = [
-  "capitan de yate", "capitán de yate", "capitan de la marina mercante",
-  "jefe de maquinas", "primer oficial", "chief officer", "captain",
+// Títulos que ella NO tiene y que no se sacan en una semana. Si un
+// anuncio los exige, no puede presentarse: fuera, no es una oferta para
+// ella por muy bien que encaje en todo lo demás.
+//
+// Ojo con el PPER: es Patrón Profesional de Embarcaciones de Recreo, y
+// no es lo mismo que el PER ni que el patrón portuario, que sí tiene.
+export const TITULOS_QUE_NO_TIENE = [
+  "pper", "patron profesional",
+  "patron de yate", "patron de altura", "capitan de yate",
+  "capitan de la marina mercante", "capitan", "captain",
+  "primer oficial", "oficial de puente", "piloto",
+  "jefe de maquinas", "patron de pesca",
+];
+
+// Los que sí tiene. Muchos anuncios ponen "patrón portuario o PPER":
+// esa sí la puede hacer, y no debe caerse por nombrar el PPER.
+export const TITULOS_QUE_TIENE = [
+  "patron portuario", "p. portuario", "portuario",
+  "per", "patron de embarcaciones de recreo", "patron de recreo",
+  // "Patrón con anejas" es el PER con habilitaciones anejas, que sí tiene.
+  "anejas", "habilitaciones anejas",
+  "marinero de puente", "marinera de puente", "marineria de puente",
+  "competent crew", "stcw",
 ];
 
 // Barcos vigilados. Si aparece uno, la oferta sube a lo más alto.
