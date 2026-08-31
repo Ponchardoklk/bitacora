@@ -29,7 +29,12 @@ export const nombre = "Emplea Náutica";
 // así una racha de 500 no convierte la tarea en media hora de reintentos.
 // Su servidor falla como la mitad de las veces, de ahí que el corte por
 // fallos seguidos sea generoso: si fuera estricto no entraría ninguna.
+// El tope cuenta fichas **conseguidas**, no intentos. Su servidor falla
+// como la mitad de las veces, y si los fallos gastaran cupo harían falta
+// una semana de pasadas para completar cuarenta ofertas. El tope de
+// intentos va aparte, para que la tarea no se eternice.
 const MAX_FICHAS = 15;
+const MAX_INTENTOS = 40;
 
 function tarjetas(html) {
   // Se parte por el comienzo de cada <li> de oferta: buscar el </li>
@@ -90,19 +95,30 @@ export async function buscar({ completas = new Set() } = {}) {
 
   const ofertas = [];
   let fichas = 0;
+  let intentos = 0;
   let fallosSeguidos = 0;
 
   for (const t of vistas.values()) {
     // Se pide la ficha solo si la oferta puede interesarle y aún no
     // tenemos su texto. Si un día falla, mañana se vuelve a intentar.
     const merecePena =
-      pareceRelevante(t) && !fueraDeSuAlcance(t.puesto) && !completas.has(t.url) && fichas < MAX_FICHAS && fallosSeguidos < 8;
+      pareceRelevante(t) &&
+      !fueraDeSuAlcance(t.puesto) &&
+      !completas.has(t.url) &&
+      fichas < MAX_FICHAS &&
+      intentos < MAX_INTENTOS &&
+      fallosSeguidos < 10;
 
     let detalle = null;
     if (merecePena) {
-      fichas++;
+      intentos++;
       detalle = await ficha(t.url);
-      fallosSeguidos = detalle ? 0 : fallosSeguidos + 1;
+      if (detalle) {
+        fichas++;
+        fallosSeguidos = 0;
+      } else {
+        fallosSeguidos++;
+      }
       await respirar(2000);
     }
 
@@ -115,7 +131,8 @@ export async function buscar({ completas = new Set() } = {}) {
     });
   }
 
-  if (fallosSeguidos >= 8) {
+  if (intentos) console.log(`  fichas leídas: ${fichas} de ${intentos} intentos`);
+  if (fallosSeguidos >= 10) {
     console.warn("  su servidor está devolviendo 500; se deja para mañana");
   }
 

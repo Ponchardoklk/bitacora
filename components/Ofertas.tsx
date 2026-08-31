@@ -73,6 +73,7 @@ export default function Ofertas({
   const [abrirFiltros, setAbrirFiltros] = useState(false);
   const [notaAbierta, setNotaAbierta] = useState<string | null>(null);
   const [descartando, setDescartando] = useState<string | null>(null);
+  const [textoAbierto, setTextoAbierto] = useState<string | null>(null);
 
   const [todos, setTodos] = useState<Record<string, Filtros>>({
     embarque: filtrosPorDefecto(),
@@ -477,6 +478,10 @@ export default function Ofertas({
               const horas = horasDesde(o.publicada);
               const banda =
                 o.score >= 9 ? C.estribor : o.score >= 7 ? C.sonda : C.linea;
+              const hayTexto = Boolean(
+                o.texto && o.texto.length > o.puesto.length + 40
+              );
+              const abierto = textoAbierto === o.id;
               return (
                 <li
                   key={o.id}
@@ -623,23 +628,46 @@ export default function Ofertas({
                       </p>
                     )}
 
-                    {/* Dos líneas del anuncio original. Muchas ofertas no
-                        traen ni eslora ni salario, y sin esto la tarjeta
-                        se queda en nada. */}
-                    {o.texto && o.texto.length > o.puesto.length + 40 && (
-                      <p
-                        style={{
-                          fontSize: 12,
-                          color: C.suave,
-                          marginTop: 6,
-                          lineHeight: 1.45,
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                        }}
-                      >
-                        {o.texto}
+                    {/* El anuncio original, para que pueda leerlo entero
+                        sin salir de aquí. Importa más de lo que parece:
+                        los portales se caen, y entonces el enlace no
+                        lleva a ninguna parte. */}
+                    {hayTexto ? (
+                      <>
+                        <p
+                          onClick={() => setTextoAbierto(abierto ? null : o.id)}
+                          style={{
+                            fontSize: 12,
+                            color: C.suave,
+                            marginTop: 8,
+                            lineHeight: 1.45,
+                            whiteSpace: "pre-line",
+                            cursor: "pointer",
+                            ...(abierto
+                              ? {}
+                              : {
+                                  display: "-webkit-box",
+                                  WebkitLineClamp: 2,
+                                  WebkitBoxOrient: "vertical" as const,
+                                  overflow: "hidden",
+                                }),
+                          }}
+                        >
+                          {o.texto}
+                        </p>
+                        {o.texto.length > 150 && (
+                          <button
+                            onClick={() => setTextoAbierto(abierto ? null : o.id)}
+                            className="py-1"
+                            style={{ fontSize: 12, color: C.sonda, textDecoration: "underline" }}
+                          >
+                            {abierto ? "Leer menos" : "Leer el anuncio entero"}
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      <p style={{ fontSize: 11, color: C.suave, marginTop: 8, fontStyle: "italic" }}>
+                        El anuncio todavía no se ha podido leer entero.
                       </p>
                     )}
 
