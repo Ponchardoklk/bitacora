@@ -1,18 +1,18 @@
 {
-  "actualizado": "2026-08-31T15:52:59.876Z",
+  "actualizado": "2026-08-31T16:21:06.403Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-08-31T15:52:02.618Z",
-      "leidas": 40,
-      "utiles": 24
+      "ultimoCheck": "2026-08-31T16:20:08.492Z",
+      "leidas": 0,
+      "utiles": 0
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-08-31T15:52:42.548Z",
+      "ultimoCheck": "2026-08-31T16:20:49.033Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-08-31T15:52:59.870Z",
+      "ultimoCheck": "2026-08-31T16:21:06.398Z",
       "leidas": 17,
       "utiles": 7
     }
@@ -41,7 +41,7 @@
       "texto": "Patrón profesional para chárter semanal en Ibiza",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": "PPER"
     },
@@ -68,7 +68,7 @@
       "texto": "Buscamos patron de cabotaje",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -94,8 +94,8 @@
       "fechaFiable": false,
       "texto": "Marinero",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -121,8 +121,8 @@
       "fechaFiable": false,
       "texto": "Se Precisa Marinero en Alicante",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -148,8 +148,8 @@
       "fechaFiable": false,
       "texto": "Marinero",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -175,8 +175,8 @@
       "fechaFiable": false,
       "texto": "MARINERO/A",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -203,7 +203,7 @@
       "texto": "PUESTO DE MARINERO",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -230,7 +230,7 @@
       "texto": "Se solicita marinero",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -256,8 +256,8 @@
       "fechaFiable": false,
       "texto": "PATRON PROFESIONAL, PORTUARIO O SUPERIOR",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -283,8 +283,8 @@
       "fechaFiable": false,
       "texto": "Se solicita marinero puente para traslado de clientes",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -310,8 +310,8 @@
       "fechaFiable": false,
       "texto": "Se Precisa Marinero en Torrevieja",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -338,7 +338,7 @@
       "texto": "4 MARINEROS EN PALAMÓS",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -364,8 +364,8 @@
       "fechaFiable": false,
       "texto": "Se buscan patrones portuarios y marineros",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -391,8 +391,8 @@
       "fechaFiable": false,
       "texto": "Marinero / Maninera en Tenerife",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -418,8 +418,8 @@
       "fechaFiable": false,
       "texto": "Patron",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -445,8 +445,8 @@
       "fechaFiable": false,
       "texto": "patrón para embarcación",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -472,8 +472,8 @@
       "fechaFiable": false,
       "texto": "Marinero/a para barca de pasaje (l’Estartit)",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -526,8 +526,8 @@
       "fechaFiable": false,
       "texto": "Se solicitan marinero de puente y marinero/as",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "score": 7,
+      "motivo": "Es tu puesto exacto, temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -580,8 +580,8 @@
       "fechaFiable": false,
       "texto": "Patrón",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -634,8 +634,8 @@
       "fechaFiable": false,
       "texto": "MARINERO/A",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -661,8 +661,8 @@
       "fechaFiable": false,
       "texto": "Patrón Portuario – Buque de Pasaje (Chiclana / Sancti Petri)",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -688,8 +688,8 @@
       "fechaFiable": false,
       "texto": "Marinero/a de Puente – Buque de Pasaje (Sancti Petri)",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -715,8 +715,8 @@
       "fechaFiable": false,
       "texto": "Marinero",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -742,8 +742,8 @@
       "fechaFiable": true,
       "texto": "Marinero/a",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -769,8 +769,8 @@
       "fechaFiable": true,
       "texto": "Marinero/a",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -823,8 +823,8 @@
       "fechaFiable": true,
       "texto": "Marinero/a - Mantenedor portuario",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -850,8 +850,8 @@
       "fechaFiable": true,
       "texto": "Patron Portuario",
       "perfil": "embarque",
-      "score": 5,
-      "motivo": "Sin eslora indicada, salario por debajo de referencia",
+      "score": 4,
+      "motivo": "Paga por debajo de tu referencia",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -877,8 +877,8 @@
       "fechaFiable": true,
       "texto": "Marinero/a de puerto",
       "perfil": "barcelona",
-      "score": 6,
-      "motivo": "Vilanova i la Geltrú, duermes en casa",
+      "score": 7,
+      "motivo": "Vilanova i la Geltrú, duermes en casa, contrato estable",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -904,8 +904,8 @@
       "fechaFiable": true,
       "texto": "Marinero/a",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -931,8 +931,8 @@
       "fechaFiable": true,
       "texto": "Patrón/patrona de barco",
       "perfil": "embarque",
-      "score": 5,
-      "motivo": "Sin eslora indicada, salario por debajo de referencia",
+      "score": 4,
+      "motivo": "Paga por debajo de tu referencia",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -958,8 +958,8 @@
       "fechaFiable": true,
       "texto": "Skipper con PPER para excursiones en velero",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Vela, sin eslora indicada, temporada",
+      "score": 7,
+      "motivo": "Velero, temporada completa",
       "watchlist": null,
       "fueraDeAlcance": "PPER"
     },
@@ -985,8 +985,8 @@
       "fechaFiable": true,
       "texto": "Patrón/patrona para barca de pasaje",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1012,8 +1012,8 @@
       "fechaFiable": true,
       "texto": "Descripción: Empresa de Charter Náutico y Eventos busca Patrón para Gobierno de embarcación 7 metros – Day charter. Zona Marina Alta (Javea, Calpe, Moraira, Benissa).\n\nTitulación: Patrón Yate con habilitaciones anejas – PPER – o similar\n\nBuscamos profesional que ofrezca seguridad a los clientes y buenas habilidades sociales.\n\nExperiencia 1-2 años\n\nIdioma : español. Se valorará muy positivamente ingles hablado nivel conversación.\n\nResidencia : Marina Alta\n\nOFRECEMOS :\n\n– Sueldo según valía del candidato\n\n– Contrato a tiempo completo ( Julio-Agosto ) y colaboraciones Free-Lance.\n\nEnviar Cv a info@esfera-group.com\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 70 jobs",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1039,8 +1039,8 @@
       "fechaFiable": true,
       "texto": "¡Únete a la flota de Dolphin Rentals en Valencia! Buscamos patrones profesionales (PPER) o PY+habilitaciones anejas con ganas de liderar charters de día en la Comunidad Valenciana. Te encargarás del gobierno de nuestras embarcaciones y de hacer que nuestros clientes disfruten del mar con total seguridad y profesionalidad. Ofrecemos colaboración freelance o contarto a tiempo parcial para servicios de media jornada (mañana y tarde), gestionando nosotros toda la operativa comercial y administrativa para que tú solo te preocupes de navegar y cuidar el barco.\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 40 jobs",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1093,8 +1093,8 @@
       "fechaFiable": true,
       "texto": "IGY Ibiza Marina, gestora de amarres de superyates en el Puerto de Ibiza, busca marineros para incorporación inmediata y posibilidad de trabajo para todo el año.\n\nEl trabajo consiste en asistencia desde tierra a los yates que atracan en sus instalaciones.\n\nNo se requiere experiencia. Ideal para jóvenes que estén empezando en la náutica.\n\nSe requiere certificado de Formación Básica en Seguridad Marítima (STCW).",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1120,8 +1120,8 @@
       "fechaFiable": true,
       "texto": "IGY Ibiza Marina, gestora de amarres de superyates en el Puerto de Ibiza, busca Patrón Portuario para incorporación inmediata y posibilidad de trabajo para todo el año.\n\nNo se requiere experiencia.\n\nSalario: 26.000 euros/anual.\n\nImprescindible estar en posesión del título de Patrón Portuario y sus certificados en vigor.",
       "perfil": "embarque",
-      "score": 5,
-      "motivo": "Sin eslora indicada, salario por debajo de referencia",
+      "score": 4,
+      "motivo": "Paga por debajo de tu referencia",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1147,8 +1147,8 @@
       "fechaFiable": true,
       "texto": "Se necesita PATRÓN PORTUARIO para trabajar la temporada 2026 en Puerto Marina Benalmádena a bordo de un catamarán de pasaje de 40 personas modalidad DAY CHARTER.\n\nContrato fijo discontinuo durante todo el año. Jornada completa con un día libre a la semana.\n\nEnrole en barco con alta en ISM. Salario 1900euros/mensuales + extras.\n\nTAREAS A DESEMPEÑAR:\n\nLaborales normales de capitán: gestión del barco, limpieza y mantenimiento de la embarcación, supervisión del trabajo de los marineros, recepción de pasajeros y atención a los clientes, etc.\n\nREQUISITOS:\n\nTitulación exigida: patrón portuario, formación básica y certificado médico en vigor\n\nInglés\n\nExperiencia previa necesaria demostrable\n\nSe valorará positivamente la motivación, simpatía, trabajo en equipo y las ganas de aprender\n\nPosibilidad de formar parte de la plantilla fija de la empresa\n\nAbstenerse personas que no cumplan todos los requisitos.\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 65 jobs",
       "perfil": "embarque",
-      "score": 5,
-      "motivo": "Sin eslora indicada, salario por debajo de referencia, temporada",
+      "score": 6,
+      "motivo": "Temporada completa, se vive a bordo, paga por debajo de tu referencia",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1175,7 +1175,7 @@
       "texto": "Se necesita marinera, sin experiencia, para temporada de verano 2026.\n\nRequisitos:\n\nFormación Básica en Seguridad Marítima (STCW)\n\nIdiomas: español y inglés.\n\nOfrecen contrato de 5 a 6 meses. Salario fijo mensual de 1.500 euros, más 80 euros por salida, más propinas.\n\nLa empresa cuenta con servicio de limpieza de barcos, por lo que la limpieza no forma parte de las tareas de marinera.\n\nEnviar CV a: lgcibiza@gmail.com",
       "perfil": "embarque",
       "score": 5,
-      "motivo": "Sin eslora indicada, salario por debajo de referencia, temporada",
+      "motivo": "Temporada completa, paga por debajo de tu referencia",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1201,8 +1201,8 @@
       "fechaFiable": true,
       "texto": "Se ofrece trabajo de patron portuario o pper con mando y que puedan despachar barcos en lista sexta y hasta 12 personas, para trabajar haciendo transfers en zodiac. Buena remuneracion.\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 65 jobs",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Sin eslora indicada",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -1229,7 +1229,7 @@
       "texto": "Importante empresa de eventos y charter náutico busca Patrón para Gobierno de embarcación 7 metros – Day Charter. Zona Marina Alta (Javea, Calpe, Moraira, Benissa).\n\nTitulación : Patrón Yate con habilitaciones anejas – Patrón Portuario – PPER\n\nBuscamos un profesional, que ofrezca seguridad a los clientes y buenas habilidades sociales.\n\nExperiencia de al menos 2 años\n\nIdioma : Español. Se valorara muy positivamente nivel alto de ingles hablado.\n\nResidencia en la Marina Alta.\n\nEnviar Cv con carta presentación a info@esfera-group.com\n\nOFRECEMOS:\n\nSueldo según valía del candidato\n\nContrato a tiempo completo ( Julio-Agosto )\n\nEnviar Cv con carta presentación a info@esfera-group.com\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 89 jobs",
       "perfil": "embarque",
       "score": 6,
-      "motivo": "Sin eslora indicada, temporada",
+      "motivo": "Temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     }

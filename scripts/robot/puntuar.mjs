@@ -82,6 +82,10 @@ export function perfilDe(oferta) {
   return oferta.zona === "barcelona" ? "barcelona" : "embarque";
 }
 
+// La mayoría de anuncios no dicen ni eslora ni salario. Si solo se
+// puntuara con eso, todo quedaría en un 6 y la lista no ordenaría nada.
+// Así que suman también las señales pequeñas: que sea vela, que sea de
+// temporada, que se viva a bordo, que el puesto sea el de su título.
 function puntuarEmbarque(o) {
   const p = PERFILES.embarque;
   const razones = [];
@@ -102,25 +106,47 @@ function puntuarEmbarque(o) {
     nota = 4;
     razones.push(`Solo ${o.eslora} m`);
   } else {
-    nota = 6;
-    razones.push(vela ? "Vela, sin eslora indicada" : "Sin eslora indicada");
+    nota = 5;
+    if (vela) {
+      nota += 1;
+      razones.push(o.tipo === "goleta" ? "Goleta" : "Velero");
+    }
+  }
+
+  // Es el puesto de su titulación, no marinería genérica.
+  if (hay(sinTildes(o.puesto), ["marinero de puente", "marinera de puente", "deckhand", "deck crew", "bridge crew"])) {
+    nota += 1;
+    razones.push("es tu puesto exacto");
+  }
+
+  if (o.duracion === "temporada") {
+    nota += 1;
+    razones.push("temporada completa");
+  }
+  if (o.duracion === "dia") {
+    nota -= 1;
+    razones.push("jornadas sueltas");
+  }
+  if (o.alojamiento === "a_bordo") {
+    nota += 1;
+    razones.push("se vive a bordo");
   }
 
   if (o.salarioMin && o.periodo === "mes") {
     if (o.salarioMin >= p.salarioReferencia) {
       nota += 1;
-      razones.push("salario por encima de tu referencia");
+      razones.push("paga por encima de tu referencia");
     } else if (o.salarioMin < 2500) {
       nota -= 1;
-      razones.push("salario por debajo de referencia");
+      razones.push("paga por debajo de tu referencia");
     }
   }
 
-  if (o.duracion === "temporada") razones.push("temporada");
-  if (o.duracion === "dia") nota -= 1;
-
   // Los títulos que le faltan no descartan, pero pesan.
-  if (o.eng1) nota -= 2;
+  if (o.eng1) {
+    nota -= 2;
+    razones.push("piden ENG1");
+  }
   if (o.pb2) nota -= 1;
 
   return { nota, razones };
@@ -142,19 +168,29 @@ function puntuarBarcelona(o) {
   }
 
   if (o.eslora && o.eslora >= p.esloraMinima && o.eslora <= p.esloraMaxima) {
+    nota += 1;
     razones.push(`${o.eslora} m, tu titulación llega`);
   } else if (o.eslora && o.eslora > p.esloraMaxima) {
     nota -= 1;
     razones.push(`${o.eslora} m, por encima de patrón portuario`);
   }
 
+  if (o.duracion === "indefinido") {
+    nota += 1;
+    razones.push("contrato estable");
+  }
+  if (o.duracion === "dia") {
+    nota -= 1;
+    razones.push("jornadas sueltas");
+  }
+
   if (o.salarioMin && o.periodo === "mes") {
     if (o.salarioMin >= p.salarioReferencia) {
       nota += 1;
-      razones.push("salario por encima de tu referencia");
+      razones.push("paga por encima de tu referencia");
     } else if (o.salarioMin < 2000) {
       nota -= 2;
-      razones.push("salario bajo");
+      razones.push("paga baja");
     }
   }
 
@@ -188,7 +224,11 @@ export function puntuar(oferta) {
   return {
     perfil,
     score: Math.max(0, Math.min(10, Math.round(final))),
-    motivo: razones.join(", ").replace(/^./, (c) => c.toUpperCase()),
+    // Si no hay nada que decir, se dice eso, en vez de repetir "sin
+    // eslora indicada" en las cuarenta tarjetas.
+    motivo: razones.length
+      ? razones.join(", ").replace(/^./, (c) => c.toUpperCase())
+      : "El anuncio da pocos datos",
     watchlist: null,
     fueraDeAlcance,
   };

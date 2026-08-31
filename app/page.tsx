@@ -26,5 +26,5 @@ export default function Pagina() {
   // el teclado del PIN en cada recarga.
   if (!montado) return <div style={{ minHeight: "100vh", background: C.tinta }} />;
   if (!dentro) return <PanelPin onEntrar={() => setDentro(true)} />;
-  return <Ofertas ofertas={ofertas} />;
+  return <Ofertas ofertas={ofertas} actualizado={archivo.actualizado} />;
 }

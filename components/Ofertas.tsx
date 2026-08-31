@@ -60,7 +60,13 @@ const textoAplicada = (d: number) =>
 const alojamientoTexto = (a: string | null) =>
   a === "a_bordo" ? "vive a bordo" : a === "casa" ? "duerme en casa" : null;
 
-export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
+export default function Ofertas({
+  ofertas,
+  actualizado,
+}: {
+  ofertas: Oferta[];
+  actualizado?: string;
+}) {
   const [perfil, setPerfil] = useState<string>("embarque");
   const [marcas, setMarcas] = useState<Marcas>({});
   const [sinVerAlEntrar, setSinVerAlEntrar] = useState<Set<string>>(new Set());
@@ -276,21 +282,36 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
           </div>
 
           <div className="mt-3 flex gap-1">
-            {PERFILES.map(([k, label]) => (
-              <button
-                key={k}
-                onClick={() => setPerfil(k)}
-                className="flex-1 py-2 text-sm"
-                style={{
-                  background: perfil === k ? C.papel : "transparent",
-                  color: perfil === k ? C.tinta : C.papel,
-                  border: `1px solid ${perfil === k ? C.papel : C.sonda}`,
-                  fontWeight: perfil === k ? 600 : 400,
-                }}
-              >
-                {label}
-              </button>
-            ))}
+            {PERFILES.map(([k, label]) => {
+              const cuantas = ofertas.filter(
+                (o) => o.perfil === k && !o.fueraDeAlcance
+              ).length;
+              const activa = perfil === k;
+              return (
+                <button
+                  key={k}
+                  onClick={() => setPerfil(k)}
+                  className="flex-1 py-2 text-sm"
+                  style={{
+                    background: activa ? C.papel : "transparent",
+                    color: activa ? C.tinta : C.papel,
+                    border: `1px solid ${activa ? C.papel : C.sonda}`,
+                    fontWeight: activa ? 600 : 400,
+                  }}
+                >
+                  {label}{" "}
+                  <span
+                    style={{
+                      fontVariantNumeric: "tabular-nums",
+                      color: activa ? C.suave : C.arena,
+                      fontWeight: 400,
+                    }}
+                  >
+                    {cuantas}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -450,39 +471,60 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
             </p>
           </div>
         ) : (
-          <ul className="grid items-start gap-3 md:grid-cols-2">
+          <ul className="grid gap-3 md:grid-cols-2">
             {lista.map((o) => {
               const m = marca(o.id);
               const horas = horasDesde(o.publicada);
+              const banda =
+                o.score >= 9 ? C.estribor : o.score >= 7 ? C.sonda : C.linea;
               return (
                 <li
                   key={o.id}
+                  // Columna flexible para que, en dos columnas, las dos
+                  // tarjetas de una fila midan igual y los botones queden
+                  // alineados abajo.
+                  className="flex flex-col"
                   style={{
                     background: C.papelAlt,
-                    borderLeft: `4px solid ${
-                      o.score >= 9 ? C.estribor : o.score >= 7 ? C.sonda : C.linea
-                    }`,
+                    borderLeft: `5px solid ${banda}`,
                     opacity: m.estado === "descartada" ? 0.55 : 1,
                   }}
                 >
-                  <div className="px-3 py-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <h2 style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.3 }}>
+                  <div className="flex-1 px-4 py-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <h2 style={{ fontSize: 16, fontWeight: 600, lineHeight: 1.3 }}>
                         {o.puesto}
                       </h2>
-                      {sinVerAlEntrar.has(o.id) && (
+
+                      {/* La nota, a la vista. Con la banda sola no se
+                          distingue un 9 de un 7 de un vistazo. */}
+                      <div className="flex shrink-0 items-center gap-2">
+                        {sinVerAlEntrar.has(o.id) && (
+                          <span
+                            style={{
+                              fontSize: 10,
+                              color: C.estribor,
+                              border: `1px solid ${C.estribor}`,
+                              padding: "1px 5px",
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            nueva
+                          </span>
+                        )}
                         <span
+                          title={`Encaje ${o.score} sobre 10`}
                           style={{
-                            fontSize: 10,
-                            color: C.estribor,
-                            border: `1px solid ${C.estribor}`,
-                            padding: "1px 5px",
-                            whiteSpace: "nowrap",
+                            fontSize: 17,
+                            fontWeight: 700,
+                            lineHeight: 1,
+                            color: banda === C.linea ? C.suave : banda,
+                            fontVariantNumeric: "tabular-nums",
                           }}
                         >
-                          nueva
+                          {o.score}
                         </span>
-                      )}
+                      </div>
                     </div>
 
                     {o.watchlist && (
@@ -530,14 +572,20 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                         .join(" · ")}
                     </p>
 
-                    <div className="mt-2 flex items-baseline justify-between gap-2">
+                    <div className="mt-3 flex items-baseline justify-between gap-2">
+                      {/* Un salario de verdad pesa; la falta de salario
+                          se dice, pero no grita. */}
                       <span
-                        style={{
-                          fontSize: 15,
-                          fontWeight: 600,
-                          fontVariantNumeric: "tabular-nums",
-                          color: o.salarioMin ? C.tinta : C.suave,
-                        }}
+                        style={
+                          o.salarioMin
+                            ? {
+                                fontSize: 17,
+                                fontWeight: 700,
+                                fontVariantNumeric: "tabular-nums",
+                                color: C.tinta,
+                              }
+                            : { fontSize: 12, color: C.suave, fontStyle: "italic" }
+                        }
                       >
                         {o.salarioMin
                           ? `${o.salarioMin.toLocaleString("es-ES")} €/${
@@ -570,8 +618,28 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                     </div>
 
                     {o.motivo && (
-                      <p style={{ fontSize: 12, color: C.sonda, marginTop: 6 }}>
+                      <p style={{ fontSize: 12, color: C.sonda, marginTop: 8 }}>
                         {o.motivo}
+                      </p>
+                    )}
+
+                    {/* Dos líneas del anuncio original. Muchas ofertas no
+                        traen ni eslora ni salario, y sin esto la tarjeta
+                        se queda en nada. */}
+                    {o.texto && o.texto.length > o.puesto.length + 40 && (
+                      <p
+                        style={{
+                          fontSize: 12,
+                          color: C.suave,
+                          marginTop: 6,
+                          lineHeight: 1.45,
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                        }}
+                      >
+                        {o.texto}
                       </p>
                     )}
 
@@ -644,7 +712,11 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
 
                   <div
                     className="flex"
-                    style={{ borderTop: `1px solid ${C.linea}`, fontSize: 12 }}
+                    style={{
+                      borderTop: `1px solid ${C.linea}`,
+                      fontSize: 12,
+                      background: C.papel,
+                    }}
                   >
                     <Accion
                       on={m.estado === "guardada"}
@@ -666,9 +738,12 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                       Nota
                     </Accion>
                     {m.estado === "descartada" ? (
-                      <Accion click={() => cambiar(o.id, "nueva")}>Recuperar</Accion>
+                      <Accion ultima click={() => cambiar(o.id, "nueva")}>
+                        Recuperar
+                      </Accion>
                     ) : (
                       <Accion
+                        ultima
                         color={C.babor}
                         click={() => setDescartando(descartando === o.id ? null : o.id)}
                       >
@@ -683,10 +758,15 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
         )}
 
         <footer
-          className="mt-8 px-3 py-3"
-          style={{ background: C.papelAlt, fontSize: 12, color: C.suave }}
+          className="mt-8 px-4 py-4"
+          style={{
+            background: C.papelAlt,
+            borderTop: `2px solid ${C.linea}`,
+            fontSize: 12,
+            color: C.suave,
+          }}
         >
-          <p style={{ color: C.tinta, fontWeight: 600, marginBottom: 4 }}>
+          <p style={{ color: C.tinta, fontWeight: 600, marginBottom: 6 }}>
             Lo que dice el histórico
           </p>
           {/* Con dos o tres ofertas no se puede concluir nada, y decir
@@ -704,6 +784,13 @@ export default function Ofertas({ ofertas }: { ofertas: Oferta[] }) {
                 ? `1 oferta de este trimestre pedía ${bloqueos[0].titulo}`
                 : `${bloqueos[0].n} ofertas de este trimestre pedían ${bloqueos[0].titulo}`}
               . Todavía son pocas para sacar conclusiones.
+            </p>
+          )}
+
+          {actualizado && (
+            <p style={{ marginTop: 10, fontSize: 11, color: C.suave }}>
+              {ofertas.length} ofertas guardadas · última búsqueda{" "}
+              {antig(horasDesde(actualizado))}
             </p>
           )}
         </footer>
@@ -750,11 +837,13 @@ function Accion({
   on,
   click,
   color,
+  ultima,
   children,
 }: {
   on?: boolean;
   click: () => void;
   color?: string;
+  ultima?: boolean;
   children: React.ReactNode;
 }) {
   return (
@@ -764,7 +853,8 @@ function Accion({
       style={{
         color: on ? C.papel : color || C.sonda,
         background: on ? C.sonda : "transparent",
-        borderRight: `1px solid ${C.linea}`,
+        borderRight: ultima ? "none" : `1px solid ${C.linea}`,
+        fontWeight: on ? 600 : 400,
       }}
     >
       {children}
