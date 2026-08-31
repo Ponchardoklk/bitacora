@@ -13,7 +13,7 @@ import {
   WATCHLIST,
   ZONA_BARCELONA,
 } from "./perfiles.mjs";
-import { sinTildes } from "./extraer.mjs";
+import { lugarConcreto, sinTildes } from "./extraer.mjs";
 
 const escapar = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -142,12 +142,16 @@ function puntuarEmbarque(o) {
     }
   }
 
-  // Los títulos que le faltan no descartan, pero pesan.
-  if (o.eng1) {
-    nota -= 2;
-    razones.push("piden ENG1");
-  }
+  // El ENG1 no resta: tiene el reconocimiento médico equivalente del
+  // Instituto Social de la Marina, así que puede presentarse igual.
   if (o.pb2) nota -= 1;
+
+  // Un anuncio que solo dice "Mediterranean" no dice nada: ni puerto, ni
+  // si tendría que cruzar medio mar. Esas ella ni las mira.
+  if (!lugarConcreto(o.puerto ?? "")) {
+    nota -= 2;
+    razones.push("no dice en qué puerto");
+  }
 
   return { nota, razones };
 }

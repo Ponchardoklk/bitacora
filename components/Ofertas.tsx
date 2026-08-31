@@ -173,9 +173,13 @@ export default function Ofertas({
         // le enseña. Sigue en el histórico y cuenta para el pie.
         .filter((o) => !o.fueraDeAlcance)
         .filter((o) => (f.zonas.length ? f.zonas.includes(o.zona ?? "") : true))
-        .filter((o) => (f.tipos.length ? f.tipos.includes(o.tipo ?? "") : true))
+        // Mismo criterio que con el salario: lo que el anuncio no dice no
+        // puede descartarla. Si no, marcar los cuatro tipos de barco
+        // filtraba MÁS que no marcar ninguno, porque se caían todas las
+        // ofertas que no especifican el barco. Que son casi todas.
+        .filter((o) => (f.tipos.length ? !o.tipo || f.tipos.includes(o.tipo) : true))
         .filter((o) =>
-          f.duraciones.length ? f.duraciones.includes(o.duracion ?? "") : true
+          f.duraciones.length ? !o.duracion || f.duraciones.includes(o.duracion) : true
         )
         .filter((o) => (o.eslora ?? 0) >= f.esloraMin)
         .filter((o) =>
@@ -255,7 +259,6 @@ export default function Ofertas({
     const sumar = (titulo: string) => (cuenta[titulo] = (cuenta[titulo] ?? 0) + 1);
 
     for (const o of trimestre) {
-      if (o.eng1) sumar("ENG1");
       if (o.pb2) sumar("Powerboat 2");
       if (o.fueraDeAlcance) sumar(o.fueraDeAlcance);
     }
@@ -356,6 +359,9 @@ export default function Ofertas({
                 {l}
               </Chip>
             ))}
+            <p style={{ fontSize: 11, color: C.suave, width: "100%", marginTop: 2 }}>
+              Las ofertas que no dicen qué barco es salen igualmente.
+            </p>
           </Grupo>
 
           <Grupo titulo="Duración">
@@ -671,12 +677,12 @@ export default function Ofertas({
                       </p>
                     )}
 
-                    {(o.eng1 || o.pb2) && (
+                    {/* El ENG1 ya no cuenta como carencia: tiene el
+                        reconocimiento médico equivalente del Instituto
+                        Social de la Marina. */}
+                    {o.pb2 && (
                       <p style={{ fontSize: 12, color: C.babor, marginTop: 4 }}>
-                        Te falta:{" "}
-                        {[o.eng1 && "ENG1", o.pb2 && "Powerboat 2"]
-                          .filter(Boolean)
-                          .join(" y ")}
+                        Te falta: Powerboat 2
                       </p>
                     )}
 

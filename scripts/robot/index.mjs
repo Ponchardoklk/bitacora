@@ -97,6 +97,36 @@ function normalizar(cruda, previos) {
   return { id: idDe(oferta), ...oferta, ...nota };
 }
 
+// Vuelve a sacar los datos de una oferta ya guardada, con las reglas de
+// hoy. Cuando el robot aprende a leer algo nuevo —que la costa española
+// del Mediterráneo es Mediterráneo, que "70m+" es una eslora— el
+// histórico entero se corrige solo en la siguiente pasada.
+//
+// Solo pisa un valor si el nuevo no viene vacío: hay datos que salieron
+// de la tarjeta del listado y ya no están en el texto guardado.
+function reextraer(o) {
+  const todo = [o.puesto, o.empresa, o.puerto, o.texto].filter(Boolean).join("\n");
+  const nuevo = {
+    zona: extraer.zona(o.puerto || "", todo),
+    tipo: extraer.tipoBarco(todo),
+    eslora: extraer.eslora(todo),
+    duracion: extraer.duracion(todo, ""),
+    barco: extraer.barco(todo),
+  };
+  for (const [campo, valor] of Object.entries(nuevo)) {
+    if (valor !== null && valor !== undefined) o[campo] = valor;
+  }
+
+  o.eng1 = extraer.pideEng1(todo);
+  o.pb2 = extraer.pidePb2(todo);
+
+  const sal = extraer.salario(o.texto || "");
+  if (sal.min) {
+    o.salarioMin = sal.min;
+    o.periodo = sal.periodo;
+  }
+}
+
 async function principal() {
   const previo = fs.existsSync(FICHERO)
     ? JSON.parse(fs.readFileSync(FICHERO, "utf8"))
@@ -172,6 +202,7 @@ async function principal() {
   // ofertas que le piden el PPER, que ella no tiene.
   const antesDeRevisar = ofertas.length;
   ofertas = ofertas.filter((o) => {
+    reextraer(o); // por si el robot ha aprendido a leer algo nuevo
     const nota = puntuar(o);
     if (!nota) return false;
     Object.assign(o, nota); // y de paso se reajusta la nota

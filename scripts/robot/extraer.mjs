@@ -126,25 +126,53 @@ export function lugarUtil(lugar = "") {
   return lugar.trim();
 }
 
-const ESPANA = [
-  "espana", "spain", "malaga", "cadiz", "chiclana", "murcia", "alicante",
-  "castellon", "tarragona", "galicia", "vigo", "coruna", "santander",
-  "bilbao", "asturias", "canarias", "tenerife", "las palmas", "lanzarote",
-  "almeria", "huelva", "sevilla", "marbella", "benalmadena", "sotogrande",
-  "torrevieja", "cartagena", "pinatar", "horadada", "gandia", "javea",
-  "estepona", "fuengirola", "puerto banus", "algeciras", "ceuta", "melilla",
-  "santa pola", "denia", "altea", "calpe", "burriana", "peniscola",
-  "san sebastian", "getxo", "gijon", "aviles", "ferrol", "pontevedra",
-  "sanxenxo", "cambrils", "salou", "l ampolla", "sant carles", "vinaros",
+// "Mediterranean" no es un puerto: es medio mundo. Muchos anuncios de
+// yate ponen solo eso, y esas ella ni las mira.
+const LUGARES_VAGOS = [
+  "mediterranean", "mediterraneo", "med", "med season", "europe", "europa",
+  "caribbean", "caribe", "worldwide", "global", "atlantic", "atlantico",
+  "south pacific", "pacific", "west indies", "various", "varios",
+  "international", "internacional", "usa", "tbc", "tba",
 ];
 
-// Costa catalana fuera del área metropolitana: sigue siendo España,
-// pero conviene reconocerla para no mandarla a "global".
-const CATALUNA = [
+export function lugarConcreto(lugar = "") {
+  const l = lugarUtil(lugar);
+  if (!l) return false;
+  // "Palma / Mediterranean" sí vale: queda un puerto de verdad.
+  return sinTildes(l)
+    .split(/[,/&+·|]|\band\b|\bor\b|\by\b/)
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .some((t) => !LUGARES_VAGOS.includes(t));
+}
+
+// La costa española del Mediterráneo es Mediterráneo. Parece obvio, pero
+// estaba contando como "España" y por eso el filtro de Mediterráneo se
+// dejaba fuera media Costa Brava, Levante y Andalucía oriental.
+const MED_ESPANA = [
+  // Costa Brava y Cataluña fuera del área de Barcelona
   "palamos", "roses", "l escala", "escala", "empuriabrava", "sant feliu",
-  "platja d aro", "blanes", "lloret", "girona", "costa brava", "cadaques",
-  "llanca", "port de la selva", "torroella", "estartit", "calella",
-  "sant pol", "malgrat", "pineda", "canet", "sant vicenc", "tossa",
+  "platja d aro", "lloret", "girona", "costa brava", "cadaques",
+  "llanca", "port de la selva", "torroella", "estartit", "tossa",
+  "tarragona", "cambrils", "salou", "l ampolla", "sant carles",
+  // Levante
+  "vinaros", "peniscola", "castellon", "burriana", "sagunto", "gandia",
+  "javea", "altea", "calpe", "santa pola", "alicante", "torrevieja",
+  "murcia", "cartagena", "pinatar", "horadada", "mazarron",
+  // Andalucía mediterránea y Estrecho
+  "almeria", "aguadulce", "motril", "malaga", "marbella", "benalmadena",
+  "fuengirola", "estepona", "puerto banus", "sotogrande", "algeciras",
+  "ceuta", "melilla",
+];
+
+// España de fuera del Mediterráneo: Atlántico, Cantábrico y Canarias.
+const ESPANA = [
+  "espana", "spain", "galicia", "vigo", "coruna", "ferrol", "pontevedra",
+  "sanxenxo", "santander", "bilbao", "getxo", "san sebastian",
+  "asturias", "gijon", "aviles", "huelva", "ayamonte", "cadiz",
+  "chiclana", "sevilla", "sanlucar", "rota", "puerto de santa maria",
+  "canarias", "tenerife", "las palmas", "lanzarote", "fuerteventura",
+  "gran canaria", "la gomera", "la palma",
 ];
 
 // ── Zona ──────────────────────────────────────────────────────
@@ -155,13 +183,12 @@ export function zona(lugar = "", texto = "") {
   const todo = sinTildes(`${lugar} ${texto}`);
 
   if (contiene(l, ZONA_BARCELONA)) return "barcelona";
-  if (contiene(l, CATALUNA)) return "espana";
   if (contiene(todo, CARIBE)) return "caribe";
-  if (contiene(l, MEDITERRANEO)) return "mediterraneo";
+  if (contiene(l, MED_ESPANA) || contiene(l, MEDITERRANEO)) return "mediterraneo";
   if (contiene(l, ESPANA)) return "espana";
   if (contiene(todo, ZONA_BARCELONA)) return "barcelona";
-  if (contiene(todo, CATALUNA) || contiene(todo, ESPANA)) return "espana";
-  if (contiene(todo, MEDITERRANEO)) return "mediterraneo";
+  if (contiene(todo, MED_ESPANA) || contiene(todo, MEDITERRANEO)) return "mediterraneo";
+  if (contiene(todo, ESPANA)) return "espana";
   return "global";
 }
 
