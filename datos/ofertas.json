@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-08-31T17:26:53.642Z",
+  "actualizado": "2026-09-01T09:42:43.170Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-08-31T17:25:30.014Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-01T09:41:14.337Z",
+      "leidas": 99,
+      "utiles": 52
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-08-31T17:26:10.305Z",
+      "ultimoCheck": "2026-09-01T09:41:56.532Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-08-31T17:26:27.639Z",
+      "ultimoCheck": "2026-09-01T09:42:14.802Z",
       "leidas": 17,
       "utiles": 7
     },
     "YaCrew": {
-      "ultimoCheck": "2026-08-31T17:26:53.627Z",
-      "leidas": 36,
+      "ultimoCheck": "2026-09-01T09:42:43.151Z",
+      "leidas": 37,
       "utiles": 29
     }
   },
   "ofertas": [
+    {
+      "id": "9e3973a7ce4a",
+      "puesto": "Temp or Full-Time Deckhand / Dive Master",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Solomon Islands , Australia",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112116/temp-or-full-time-deckhand-dive-master/",
+      "publicada": "2026-09-01T09:42:43.139Z",
+      "fechaFiable": false,
+      "texto": "Experienced deckhand and certified dive leader responsible for deck maintenance, tender operations, guest diving excursions, dive equipment maintenance, and supporting onboard safety during Pacific charters.",
+      "perfil": "embarque",
+      "score": 6,
+      "motivo": "Es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "c4b75ef06de3",
+      "puesto": "Deckhand Charter 49m M/Y",
+      "empresa": null,
+      "barco": null,
+      "eslora": 49,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Italy",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112131/deckhand-charter-49m-m-y/",
+      "publicada": "2026-09-01T09:42:43.136Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, washdowns, line handling and tender operations on a 49m charter motor yacht; assist guest activities, safety procedures, and routine deck upkeep.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 49 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "74749d237196",
       "puesto": "Patrón Portuario o PPER par escuela de Kite",
