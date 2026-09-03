@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-02T09:12:47.427Z",
+  "actualizado": "2026-09-03T09:19:43.107Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-02T09:11:18.680Z",
+      "ultimoCheck": "2026-09-03T09:18:09.694Z",
       "leidas": 99,
       "utiles": 52
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-02T09:12:01.056Z",
+      "ultimoCheck": "2026-09-03T09:18:53.929Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-02T09:12:19.818Z",
+      "ultimoCheck": "2026-09-03T09:19:15.122Z",
       "leidas": 17,
       "utiles": 7
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-02T09:12:47.407Z",
+      "ultimoCheck": "2026-09-03T09:19:43.090Z",
       "leidas": 37,
       "utiles": 29
     }
   },
   "ofertas": [
+    {
+      "id": "9cb297f287c9",
+      "puesto": "Deckhand 90m",
+      "empresa": null,
+      "barco": null,
+      "eslora": 90,
+      "tipo": null,
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "Mediterranean / Caribbean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112166/deckhand-90m/",
+      "publicada": "2026-09-03T09:19:43.083Z",
+      "fechaFiable": false,
+      "texto": "Hands-on deckhand for a 90m private/charter yacht; perform exterior maintenance, washdowns, polishing, line handling, tender driving, watersports support and guest-focused deck duties.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 90 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "b60eea3c511b",
       "puesto": "Deckhand",
