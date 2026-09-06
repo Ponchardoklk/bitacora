@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-05T08:44:34.275Z",
+  "actualizado": "2026-09-06T09:02:31.641Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-05T08:43:05.831Z",
-      "leidas": 99,
-      "utiles": 50
+      "ultimoCheck": "2026-09-06T09:01:03.019Z",
+      "leidas": 0,
+      "utiles": 0
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-05T08:43:48.057Z",
+      "ultimoCheck": "2026-09-06T09:01:45.479Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-05T08:44:06.522Z",
+      "ultimoCheck": "2026-09-06T09:02:04.182Z",
       "leidas": 18,
       "utiles": 7
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-05T08:44:34.254Z",
+      "ultimoCheck": "2026-09-06T09:02:31.622Z",
       "leidas": 38,
       "utiles": 30
     }
@@ -2288,6 +2288,33 @@
       "perfil": "embarque",
       "score": 9,
       "motivo": "Vela de 100 m, justo tu objetivo, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "a7d67ff2ed89",
+      "puesto": "Ayte marinero (Puerto deportivo)",
+      "empresa": "Servicios Globales Alonso",
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": "La Pobla de Farnals",
+      "duracion": "indefinido",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "InfoJobs",
+      "url": "https://www.infojobs.net/la-pobla-de-farnals/ayte-marinero-puerto-deportivo/of-i850c47e987441498a299aaf55963b2",
+      "publicada": "2026-08-11T09:00:00.000Z",
+      "fechaFiable": true,
+      "texto": "Ayte marinero (Puerto deportivo)",
+      "perfil": "embarque",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
       "watchlist": null,
       "fueraDeAlcance": null
     },
