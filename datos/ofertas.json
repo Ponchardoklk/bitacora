@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-06T09:02:31.641Z",
+  "actualizado": "2026-09-07T09:51:25.643Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-06T09:01:03.019Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-07T09:49:55.961Z",
+      "leidas": 99,
+      "utiles": 50
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-06T09:01:45.479Z",
+      "ultimoCheck": "2026-09-07T09:50:39.204Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-06T09:02:04.182Z",
-      "leidas": 18,
+      "ultimoCheck": "2026-09-07T09:50:57.705Z",
+      "leidas": 17,
       "utiles": 7
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-06T09:02:31.622Z",
+      "ultimoCheck": "2026-09-07T09:51:25.621Z",
       "leidas": 38,
       "utiles": 30
     }
   },
   "ofertas": [
+    {
+      "id": "bb05cb5cc82d",
+      "puesto": "Marinero/a",
+      "empresa": "Grupo OHLA",
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "barcelona",
+      "puerto": "Barcelona",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "InfoJobs",
+      "url": "https://www.infojobs.net/barcelona/marinero/of-i9246c627ec4a8c851616c8df96cdbd",
+      "publicada": "2026-09-07T09:50:57.695Z",
+      "fechaFiable": false,
+      "texto": "Marinero/a",
+      "perfil": "barcelona",
+      "score": 6,
+      "motivo": "Barcelona, duermes en casa",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "9e059377fd42",
       "puesto": "Deckhand • Private • Rotational, +100m MY",
@@ -1945,8 +1972,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 37,
-      "tipo": null,
+      "eslora": 13,
+      "tipo": "motor",
       "bandera": null,
       "zona": "mediterraneo",
       "puerto": "Italy",
@@ -1957,13 +1984,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i111904/deckhand/",
+      "url": "https://www.yacrew.com/i112267/deckhand/",
       "publicada": "2026-08-24T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Temporary deckhand for a 37m yacht responsible for exterior maintenance, line handling, tender driving, washdowns, polishing, mooring assistance, watersports support and general seamanship duties.",
+      "texto": "Maintain exterior cleanliness and appearance, handle lines and mooring, operate and maintain a 42ft tender, assist with watersports, safety watches, and general deck maintenance aboard a 34m motor yacht.",
       "perfil": "embarque",
-      "score": 7,
-      "motivo": "37 m, por debajo de tu objetivo, es tu puesto exacto",
+      "score": 5,
+      "motivo": "Solo 13 m, es tu puesto exacto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
@@ -2092,7 +2119,7 @@
       "eng1": false,
       "pb2": false,
       "fuente": "InfoJobs",
-      "url": "https://www.infojobs.net/ayamonte/marinero-mantenedor-portuario/of-id200ee7691499c99b16cac6859be7d",
+      "url": "https://www.infojobs.net/ayamonte/marinero-mantenedor-portuario/of-i7e70c177b4475e955c4d69ef4379d7",
       "publicada": "2026-08-19T09:00:00.000Z",
       "fechaFiable": true,
       "texto": "Marinero/a - Mantenedor portuario",
