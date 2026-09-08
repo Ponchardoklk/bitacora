@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-07T09:51:25.643Z",
+  "actualizado": "2026-09-08T09:15:52.939Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-07T09:49:55.961Z",
+      "ultimoCheck": "2026-09-08T09:14:18.215Z",
       "leidas": 99,
       "utiles": 50
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-07T09:50:39.204Z",
+      "ultimoCheck": "2026-09-08T09:15:02.259Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-07T09:50:57.705Z",
-      "leidas": 17,
-      "utiles": 7
+      "ultimoCheck": "2026-09-08T09:15:23.408Z",
+      "leidas": 18,
+      "utiles": 8
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-07T09:51:25.621Z",
+      "ultimoCheck": "2026-09-08T09:15:52.919Z",
       "leidas": 38,
       "utiles": 30
     }
   },
   "ofertas": [
+    {
+      "id": "62b045398f47",
+      "puesto": "Deckhand – 40m+ Private MY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 40,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Mediterranean",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112299/deckhand--40m-private-my/",
+      "publicada": "2026-09-08T09:15:52.905Z",
+      "fechaFiable": false,
+      "texto": "Join a private 40m+ motor yacht as Deckhand, maintaining exterior presentation, line handling, tender driving, supporting watersports, and performing routine deck maintenance during the Mediterranean season.",
+      "perfil": "embarque",
+      "score": 8,
+      "motivo": "Barco de 40 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "5bf2bb5472a6",
+      "puesto": "Marinero/a",
+      "empresa": "Puerto Costa",
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "espana",
+      "puerto": "Santa Cruz de Tenerife",
+      "duracion": "indefinido",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "InfoJobs",
+      "url": "https://www.infojobs.net/santa-cruz-de-tenerife/marinero/of-ia0221615d04aee9950c4b02b06e831",
+      "publicada": "2026-09-08T09:15:23.407Z",
+      "fechaFiable": false,
+      "texto": "Marinero/a",
+      "perfil": "embarque",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "bb05cb5cc82d",
       "puesto": "Marinero/a",
