@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-10T09:19:53.868Z",
+  "actualizado": "2026-09-11T09:16:25.618Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-10T09:18:23.133Z",
-      "leidas": 40,
-      "utiles": 10
+      "ultimoCheck": "2026-09-11T09:14:55.604Z",
+      "leidas": 99,
+      "utiles": 49
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-10T09:19:07.036Z",
+      "ultimoCheck": "2026-09-11T09:15:38.652Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-10T09:19:26.071Z",
-      "leidas": 18,
-      "utiles": 8
+      "ultimoCheck": "2026-09-11T09:15:54.063Z",
+      "leidas": 0,
+      "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-10T09:19:53.854Z",
+      "ultimoCheck": "2026-09-11T09:16:25.595Z",
       "leidas": 38,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "82bde0bc8f16",
+      "puesto": "Temporary Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": null,
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112358/temporary-deckhand/",
+      "publicada": "2026-09-11T09:16:25.587Z",
+      "fechaFiable": false,
+      "texto": "Enter your email address and we will email you a password reset link.",
+      "perfil": "embarque",
+      "score": 4,
+      "motivo": "Es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "facad41d46ff",
       "puesto": "Deckhand",
@@ -2956,10 +2983,10 @@
       "eng1": false,
       "pb2": false,
       "fuente": "Emplea Náutica",
-      "url": "https://www.empleanautica.com/trabajo/deportes-nauticos-carlos-serrano-benidorm-jornada-completa-patron-portuario-o-pper-2/",
+      "url": "https://www.empleanautica.com/trabajo/deportes-nauticos-carlos-serrano-benidorm-jornada-completa-patron-portuario-o-pper/",
       "publicada": "2026-03-18T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Se ofrece trabajo de patron portuario o pper con mando y que puedan despachar barcos en lista sexta y hasta 12 personas, para trabajar haciendo transfers en zodiac. Buena remuneracion.\n\nEmpleos Relacionados\n\nShowing 1 - 4 of 65 jobs",
+      "texto": "Patron portuario o PPER",
       "perfil": "embarque",
       "score": 5,
       "motivo": "El anuncio da pocos datos",
