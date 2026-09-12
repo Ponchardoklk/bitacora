@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-11T09:16:25.618Z",
+  "actualizado": "2026-09-12T08:57:35.726Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-11T09:14:55.604Z",
-      "leidas": 99,
-      "utiles": 49
+      "ultimoCheck": "2026-09-12T08:56:08.432Z",
+      "leidas": 98,
+      "utiles": 50
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-11T09:15:38.652Z",
+      "ultimoCheck": "2026-09-12T08:56:51.398Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-11T09:15:54.063Z",
+      "ultimoCheck": "2026-09-12T08:57:06.862Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-11T09:16:25.595Z",
+      "ultimoCheck": "2026-09-12T08:57:35.704Z",
       "leidas": 38,
       "utiles": 31
     }
@@ -47,6 +47,33 @@
       "perfil": "embarque",
       "score": 4,
       "motivo": "Es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "5f60173b05b9",
+      "puesto": "Temporary Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": 42,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Croatia",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112358/temporary-deckhand/",
+      "publicada": "2026-09-11T09:16:25.587Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, line handling, tender operations, washdowns and equipment upkeep aboard a 42m charter motor yacht; support guest activities and safety during temporary/permanent assignment.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 42 m, es tu puesto exacto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
