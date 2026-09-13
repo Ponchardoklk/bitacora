@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-12T08:57:35.726Z",
+  "actualizado": "2026-09-13T09:53:56.718Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-12T08:56:08.432Z",
+      "ultimoCheck": "2026-09-13T09:52:28.222Z",
       "leidas": 98,
       "utiles": 50
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-12T08:56:51.398Z",
+      "ultimoCheck": "2026-09-13T09:53:12.513Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-12T08:57:06.862Z",
+      "ultimoCheck": "2026-09-13T09:53:28.459Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-12T08:57:35.704Z",
+      "ultimoCheck": "2026-09-13T09:53:56.702Z",
       "leidas": 38,
       "utiles": 31
     }
@@ -2377,8 +2377,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 60,
-      "tipo": "motor",
+      "eslora": null,
+      "tipo": null,
       "bandera": null,
       "zona": "global",
       "puerto": null,
@@ -2389,13 +2389,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i111880/deckhand/",
+      "url": "https://www.yacrew.com/i92384/deckhand/",
       "publicada": "2026-08-21T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, line handling, polishing, and tender operations; assist with deck projects, safety checks, watchkeeping, and support the deck team aboard a 60m motor yacht.",
+      "texto": "Maintain exterior cleanliness, perform line handling, assist with mooring and tender operations, drive tenders, support watersports and safety routines, and carry out general deck maintenance.",
       "perfil": "embarque",
-      "score": 7,
-      "motivo": "Barco de 60 m, es tu puesto exacto, no dice en qué puerto",
+      "score": 4,
+      "motivo": "Es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
