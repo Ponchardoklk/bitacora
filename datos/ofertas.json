@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-13T09:53:56.718Z",
+  "actualizado": "2026-09-14T10:13:25.604Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-13T09:52:28.222Z",
+      "ultimoCheck": "2026-09-14T10:11:48.855Z",
       "leidas": 98,
-      "utiles": 50
+      "utiles": 48
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-13T09:53:12.513Z",
+      "ultimoCheck": "2026-09-14T10:12:36.427Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-13T09:53:28.459Z",
+      "ultimoCheck": "2026-09-14T10:12:52.272Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-13T09:53:56.702Z",
-      "leidas": 38,
-      "utiles": 31
+      "ultimoCheck": "2026-09-14T10:13:25.584Z",
+      "leidas": 39,
+      "utiles": 32
     }
   },
   "ofertas": [
+    {
+      "id": "cd6412bea62a",
+      "puesto": "Junior Deckhand - 38m Private MY - Sydney Based",
+      "empresa": null,
+      "barco": null,
+      "eslora": 38,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Sydney",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112434/junior-deckhand-38m-private-my-sydney-based/",
+      "publicada": "2026-09-14T10:13:25.582Z",
+      "fechaFiable": false,
+      "texto": "Assist deck team aboard 38m private motor yacht: maintenance, washdowns, line handling, tender operations, seamanship training, bridge support, watch duties, safety procedures.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "38 m, por debajo de tu objetivo, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "4c7a1fcaa213",
+      "puesto": "Deckhand 85m",
+      "empresa": null,
+      "barco": null,
+      "eslora": 85,
+      "tipo": null,
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "Caribbean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112437/deckhand-85m/",
+      "publicada": "2026-09-14T10:13:25.574Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, washdowns, line handling, tender driving, and basic watchkeeping; support watersports, refit shipyard tasks and crossing duties aboard an 85m expedition yacht.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 85 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "82bde0bc8f16",
       "puesto": "Temporary Deckhand",
