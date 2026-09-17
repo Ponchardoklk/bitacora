@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-16T09:36:57.364Z",
+  "actualizado": "2026-09-17T09:45:18.997Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-16T09:35:28.930Z",
+      "ultimoCheck": "2026-09-17T09:43:51.358Z",
       "leidas": 98,
       "utiles": 48
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-16T09:36:13.020Z",
+      "ultimoCheck": "2026-09-17T09:44:33.816Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-16T09:36:29.202Z",
+      "ultimoCheck": "2026-09-17T09:44:49.244Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-16T09:36:57.347Z",
-      "leidas": 39,
-      "utiles": 32
+      "ultimoCheck": "2026-09-17T09:45:18.973Z",
+      "leidas": 40,
+      "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "5c80162f4579",
+      "puesto": "Deckhand Required",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": "South of France",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112563/deckhand-required/",
+      "publicada": "2026-09-17T09:45:18.964Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, polishing, line handling, tender driving, mooring and watersports support aboard a 50m SOF superyacht; assist with routine deck operations and safety.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "1b5d2b349bd2",
       "puesto": "Deckhand – 35m Private MY",
