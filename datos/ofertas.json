@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-17T09:45:18.997Z",
+  "actualizado": "2026-09-18T09:18:50.562Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-17T09:43:51.358Z",
+      "ultimoCheck": "2026-09-18T09:17:22.576Z",
       "leidas": 98,
       "utiles": 48
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-17T09:44:33.816Z",
+      "ultimoCheck": "2026-09-18T09:18:05.744Z",
       "leidas": 85,
       "utiles": 5
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-17T09:44:49.244Z",
+      "ultimoCheck": "2026-09-18T09:18:21.304Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-17T09:45:18.973Z",
-      "leidas": 40,
+      "ultimoCheck": "2026-09-18T09:18:50.544Z",
+      "leidas": 39,
       "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "1f9af88797b8",
+      "puesto": "Male Deckhand 50m Private Program",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "europe",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112631/male-deckhand-50m-private-program/",
+      "publicada": "2026-09-18T09:18:50.537Z",
+      "fechaFiable": false,
+      "texto": "Join a 50m private motor yacht as a Deckhand, performing exterior maintenance, line handling, tender operations, watersports support, routine cleaning, and ensuring onboard safety and presentation.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 50 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "5c80162f4579",
       "puesto": "Deckhand Required",
@@ -2323,7 +2350,7 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 80,
+      "eslora": 55,
       "tipo": "motor",
       "bandera": null,
       "zona": "mediterraneo",
@@ -2335,13 +2362,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112138/deckhand/",
+      "url": "https://www.yacrew.com/i112196/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, polish and washdowns, line handling, tender operations, assist with mooring, safety duties, and general deck upkeep aboard an 80m+ private motor yacht.",
+      "texto": "Perform exterior maintenance, washdowns, polishing, line handling and tender operations; support mooring, guest-focused deck duties, safety routines and team-led deck operations aboard a 55m+ motor yacht.",
       "perfil": "embarque",
       "score": 7,
-      "motivo": "Barco de 80 m, es tu puesto exacto, no dice en qué puerto",
+      "motivo": "Barco de 55 m, es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
