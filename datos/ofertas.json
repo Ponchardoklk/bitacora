@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-18T09:18:50.562Z",
+  "actualizado": "2026-09-19T09:05:32.682Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-18T09:17:22.576Z",
+      "ultimoCheck": "2026-09-19T09:04:01.955Z",
       "leidas": 98,
       "utiles": 48
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-18T09:18:05.744Z",
+      "ultimoCheck": "2026-09-19T09:04:48.011Z",
       "leidas": 85,
-      "utiles": 5
+      "utiles": 4
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-18T09:18:21.304Z",
+      "ultimoCheck": "2026-09-19T09:05:03.482Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-18T09:18:50.544Z",
+      "ultimoCheck": "2026-09-19T09:05:32.657Z",
       "leidas": 39,
       "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "1563cddf894e",
+      "puesto": "Experienced Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": 90,
+      "tipo": "velero",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Europe",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112657/experienced-deckhand/",
+      "publicada": "2026-09-19T09:05:32.647Z",
+      "fechaFiable": false,
+      "texto": "Perform rigging and sailing operations, maintain exterior, handle large tenders, conduct line handling and maintenance, assist watches and guest water activities aboard a 90m+ sailing yacht.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Vela de 90 m, justo tu objetivo, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "b4d0bf523600",
+      "puesto": "Deckhand 75m",
+      "empresa": null,
+      "barco": null,
+      "eslora": 75,
+      "tipo": null,
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "Caribbean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112645/deckhand-75m/",
+      "publicada": "2026-09-19T09:05:32.647Z",
+      "fechaFiable": false,
+      "texto": "Carry out exterior maintenance, line handling, tender driving, washdowns, polishing, watersports support, equipment upkeep, safety checks, and assist with watchkeeping aboard a 75m private yacht.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 75 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "1f9af88797b8",
       "puesto": "Male Deckhand 50m Private Program",
