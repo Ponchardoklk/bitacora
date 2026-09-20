@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-09-19T09:05:32.682Z",
+  "actualizado": "2026-09-20T09:32:32.223Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-19T09:04:01.955Z",
+      "ultimoCheck": "2026-09-20T09:31:06.550Z",
       "leidas": 98,
       "utiles": 48
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-19T09:04:48.011Z",
+      "ultimoCheck": "2026-09-20T09:31:48.614Z",
       "leidas": 85,
       "utiles": 4
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-19T09:05:03.482Z",
+      "ultimoCheck": "2026-09-20T09:32:04.299Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-19T09:05:32.657Z",
+      "ultimoCheck": "2026-09-20T09:32:32.196Z",
       "leidas": 39,
       "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "2c741d642e2e",
+      "puesto": "Deckhand to join S/Y 60m Sailing yacht in West Palm Beach from mid-October.",
+      "empresa": null,
+      "barco": null,
+      "eslora": 60,
+      "tipo": "velero",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "West Palm Beach, Florida, USA",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112660/deckhand-to-join-s-y-60m-sailing-yacht-in-west-palm-beach-from-mid-october/",
+      "publicada": "2026-09-20T09:32:32.186Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, line handling, tender driving, assist with sail and deck operations, watchkeeping, safety drills, and support guest water activities aboard a 60m sailing yacht.",
+      "perfil": "embarque",
+      "score": 10,
+      "motivo": "Vela de 60 m, justo tu objetivo, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "1563cddf894e",
       "puesto": "Experienced Deckhand",
