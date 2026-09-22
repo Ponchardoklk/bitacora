@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-21T10:18:56.160Z",
+  "actualizado": "2026-09-22T09:34:21.674Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-21T10:17:27.754Z",
+      "ultimoCheck": "2026-09-22T09:32:52.925Z",
       "leidas": 98,
-      "utiles": 48
+      "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-21T10:18:12.165Z",
+      "ultimoCheck": "2026-09-22T09:33:35.675Z",
       "leidas": 85,
       "utiles": 4
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-21T10:18:27.772Z",
+      "ultimoCheck": "2026-09-22T09:33:51.130Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-21T10:18:56.136Z",
-      "leidas": 39,
+      "ultimoCheck": "2026-09-22T09:34:21.649Z",
+      "leidas": 40,
       "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "05518defb8c1",
+      "puesto": "2x Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": 100,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Europe",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112683/2x-deckhand/",
+      "publicada": "2026-09-22T09:34:21.640Z",
+      "fechaFiable": false,
+      "texto": "Join a 100m+ private motor yacht as a Deckhand performing exterior maintenance, tender driving, line handling, watchstanding, and watersports support across dual-season cruising itineraries.",
+      "perfil": "embarque",
+      "score": 8,
+      "motivo": "Barco de 100 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "f63cb1f837cf",
+      "puesto": "Temp Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": 60,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Mediterranean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112703/temp-deckhand/",
+      "publicada": "2026-09-22T09:34:21.639Z",
+      "fechaFiable": false,
+      "texto": "Temporary deckhand on a 60m+ private motor yacht performing exterior maintenance, line handling, tender operations, washdowns, polishing, safety watches, and supporting the deck team.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 60 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "2c741d642e2e",
       "puesto": "Deckhand to join S/Y 60m Sailing yacht in West Palm Beach from mid-October.",
