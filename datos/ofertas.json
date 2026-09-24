@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-23T09:39:38.199Z",
+  "actualizado": "2026-09-24T09:37:56.782Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-23T09:38:09.357Z",
-      "leidas": 98,
-      "utiles": 47
+      "ultimoCheck": "2026-09-24T09:37:09.766Z",
+      "leidas": 0,
+      "utiles": 0
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-23T09:38:53.646Z",
-      "leidas": 85,
-      "utiles": 3
+      "ultimoCheck": "2026-09-24T09:37:13.305Z",
+      "leidas": 0,
+      "utiles": 0
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-23T09:39:09.594Z",
+      "ultimoCheck": "2026-09-24T09:37:28.960Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-23T09:39:38.175Z",
-      "leidas": 41,
+      "ultimoCheck": "2026-09-24T09:37:56.763Z",
+      "leidas": 40,
       "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "7ea7f959b3df",
+      "puesto": "Deckhand – 100 ft Sail Yacht",
+      "empresa": null,
+      "barco": null,
+      "eslora": 30,
+      "tipo": "velero",
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "USA and Caribbean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112755/deckhand--100-ft-sail-yacht/",
+      "publicada": "2026-09-24T09:37:56.753Z",
+      "fechaFiable": false,
+      "texto": "Carry out deck operations aboard a 100 ft sailing yacht: watchkeeping, line handling, tender driving, regatta support, and exterior maintenance; Yachtmaster Offshore required.",
+      "perfil": "embarque",
+      "score": 5,
+      "motivo": "30 m, por debajo de tu objetivo, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "5a4512691797",
+      "puesto": "Deckhand – 50m Private M/Y",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "South Florida, USA",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112761/deckhand--50m-private-m-y/",
+      "publicada": "2026-09-24T09:37:56.751Z",
+      "fechaFiable": false,
+      "texto": "Join a 50m private motor yacht based in South Florida; perform exterior maintenance, line handling, tender operations, watersports support, and routine safety and deck watch duties.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "f5a7cfd652e7",
       "puesto": "Deckhand/Lead Deckhand Yachtmaster and Divemaster/Instructor Qualifications",
@@ -568,7 +622,7 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 55,
+      "eslora": 40,
       "tipo": "motor",
       "bandera": null,
       "zona": "global",
@@ -580,13 +634,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112333/deckhand/",
+      "url": "https://www.yacrew.com/i112393/deckhand/",
       "publicada": "2026-09-09T09:17:59.812Z",
       "fechaFiable": false,
-      "texto": "Experienced deckhand to maintain exterior presentation, handle linework, operate tenders (30' jet rib, 41' chase boat), assist watersports, and support deck team aboard a 55m private motor yacht.",
+      "texto": "Deckhand responsible for exterior maintenance, line handling, tender operations, and watersports support on a 40m motor yacht; ensure guest safety and pristine presentation.",
       "perfil": "embarque",
       "score": 9,
-      "motivo": "Barco de 55 m, es tu puesto exacto",
+      "motivo": "Barco de 40 m, es tu puesto exacto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
