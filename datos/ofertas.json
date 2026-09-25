@@ -1,25 +1,25 @@
 {
-  "actualizado": "2026-09-24T09:37:56.782Z",
+  "actualizado": "2026-09-25T09:56:08.523Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-24T09:37:09.766Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-25T09:54:42.065Z",
+      "leidas": 98,
+      "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-24T09:37:13.305Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-25T09:55:25.079Z",
+      "leidas": 85,
+      "utiles": 3
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-24T09:37:28.960Z",
+      "ultimoCheck": "2026-09-25T09:55:40.517Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-24T09:37:56.763Z",
-      "leidas": 40,
-      "utiles": 33
+      "ultimoCheck": "2026-09-25T09:56:08.496Z",
+      "leidas": 38,
+      "utiles": 32
     }
   },
   "ofertas": [
@@ -2620,25 +2620,25 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 90,
-      "tipo": "motor",
+      "eslora": null,
+      "tipo": null,
       "bandera": null,
-      "zona": "caribe",
+      "zona": "mediterraneo",
       "puerto": "Mediterranean",
-      "duracion": "temporada",
+      "duracion": null,
       "alojamiento": "no_indicado",
       "salarioMin": null,
       "periodo": null,
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112339/deckhand/",
+      "url": "https://www.yacrew.com/i112417/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, washdowns, polishing, line handling, tender driving, watersports support and general seamanship aboard busy 90m+ private motor yacht during Mediterranean and Caribbean seasons.",
+      "texto": "Maintain deck and exterior cleanliness, handle lines and tender operations, support guest water activities, assist maintenance, and ensure vessel presentation and safety during cruising itineraries.",
       "perfil": "embarque",
-      "score": 8,
-      "motivo": "Barco de 90 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "score": 4,
+      "motivo": "Es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
