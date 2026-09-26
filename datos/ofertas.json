@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-09-25T09:56:08.523Z",
+  "actualizado": "2026-09-26T09:38:49.574Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-25T09:54:42.065Z",
+      "ultimoCheck": "2026-09-26T09:37:20.802Z",
       "leidas": 98,
       "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-25T09:55:25.079Z",
+      "ultimoCheck": "2026-09-26T09:38:04.825Z",
       "leidas": 85,
       "utiles": 3
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-25T09:55:40.517Z",
+      "ultimoCheck": "2026-09-26T09:38:20.985Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-25T09:56:08.496Z",
+      "ultimoCheck": "2026-09-26T09:38:49.547Z",
       "leidas": 38,
       "utiles": 32
     }
   },
   "ofertas": [
+    {
+      "id": "3f20961dcca0",
+      "puesto": "Deckhand 50m+ Private",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": null,
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112814/deckhand-50m-private/",
+      "publicada": "2026-09-26T09:38:49.538Z",
+      "fechaFiable": false,
+      "texto": "Responsible for exterior upkeep, maintenance, tender handling, linework, cleaning and safety duties aboard a 50m+ private motor yacht; assist deck team and progress toward OOW.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 50 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "1314f14f7ecf",
+      "puesto": "Deckhand 90m SY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 90,
+      "tipo": "velero",
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": null,
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i112809/deckhand-90m-sy/",
+      "publicada": "2026-09-26T09:38:49.538Z",
+      "fechaFiable": false,
+      "texto": "Hands-on deckhand on a 90m sailing yacht: maintain exterior, operate winches and sailing systems, assist post-refit preparations, support owner trips in Caribbean and Med.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Vela de 90 m, justo tu objetivo, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "7ea7f959b3df",
       "puesto": "Deckhand – 100 ft Sail Yacht",
