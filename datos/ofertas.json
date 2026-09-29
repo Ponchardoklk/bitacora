@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-09-28T11:19:39.796Z",
+  "actualizado": "2026-09-29T11:00:20.363Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-09-28T11:18:52.106Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-29T10:58:48.537Z",
+      "leidas": 98,
+      "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-09-28T11:18:55.484Z",
-      "leidas": 0,
-      "utiles": 0
+      "ultimoCheck": "2026-09-29T10:59:32.002Z",
+      "leidas": 85,
+      "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-09-28T11:19:10.894Z",
+      "ultimoCheck": "2026-09-29T10:59:47.358Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-09-28T11:19:39.768Z",
+      "ultimoCheck": "2026-09-29T11:00:20.337Z",
       "leidas": 37,
       "utiles": 31
     }
