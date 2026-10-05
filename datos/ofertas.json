@@ -1,24 +1,24 @@
 {
-  "actualizado": "2026-10-04T10:50:28.834Z",
+  "actualizado": "2026-10-05T11:56:56.446Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-04T10:48:58.867Z",
+      "ultimoCheck": "2026-10-05T11:55:26.664Z",
       "leidas": 98,
       "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-04T10:49:42.479Z",
+      "ultimoCheck": "2026-10-05T11:56:09.801Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-04T10:49:57.981Z",
+      "ultimoCheck": "2026-10-05T11:56:25.244Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-04T10:50:28.818Z",
-      "leidas": 40,
+      "ultimoCheck": "2026-10-05T11:56:56.418Z",
+      "leidas": 39,
       "utiles": 32
     }
   },
@@ -526,10 +526,10 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112631/male-deckhand-50m-private-program/",
+      "url": "https://www.yacrew.com/i112632/male-deckhand-50m-private-program/",
       "publicada": "2026-09-18T09:18:50.537Z",
       "fechaFiable": false,
-      "texto": "Join a 50m private motor yacht as a Deckhand, performing exterior maintenance, line handling, tender operations, watersports support, routine cleaning, and ensuring onboard safety and presentation.",
+      "texto": "Perform deck maintenance, line-handling, tender driving, watchkeeping support, watersports preparation and guest assistance aboard a 50m private motor yacht, maintaining safety and exterior presentation.",
       "perfil": "embarque",
       "score": 7,
       "motivo": "Barco de 50 m, es tu puesto exacto, no dice en qué puerto",
