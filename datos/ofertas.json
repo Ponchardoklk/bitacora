@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-05T11:56:56.446Z",
+  "actualizado": "2026-10-06T11:37:19.959Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-05T11:55:26.664Z",
+      "ultimoCheck": "2026-10-06T11:35:47.941Z",
       "leidas": 98,
       "utiles": 47
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-05T11:56:09.801Z",
+      "ultimoCheck": "2026-10-06T11:36:33.247Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-05T11:56:25.244Z",
+      "ultimoCheck": "2026-10-06T11:36:49.078Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-05T11:56:56.418Z",
-      "leidas": 39,
+      "ultimoCheck": "2026-10-06T11:37:19.938Z",
+      "leidas": 40,
       "utiles": 32
     }
   },
   "ofertas": [
+    {
+      "id": "518ad68113e4",
+      "puesto": "Deckhand/First Mate - 25m Private/Charter SY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 25,
+      "tipo": "catamaran",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "South of France",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113024/deckhand-first-mate-25m-private-charter-sy/",
+      "publicada": "2026-10-06T11:37:19.932Z",
+      "fechaFiable": false,
+      "texto": "Operate and maintain exterior of a 24m+ catamaran, lead deck operations, tender and watersports handling, navigation support, mechanical troubleshooting, watchkeeping and guest safety on charter voyages.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "25 m, por debajo de tu objetivo, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "9542cae1b863",
       "puesto": "Lead Deckhand – Private 65m+ Support Yacht",
@@ -2836,25 +2863,25 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 100,
+      "eslora": 60,
       "tipo": "motor",
       "bandera": null,
       "zona": "mediterraneo",
       "puerto": "Mediterranean",
-      "duracion": null,
+      "duracion": "temporada",
       "alojamiento": "no_indicado",
       "salarioMin": null,
       "periodo": null,
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112638/deckhand/",
+      "url": "https://www.yacrew.com/i111945/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, washdowns, polishing, line handling, tender operations and watersports support on a 100m+ motor yacht; assist deck team with safety, equipment upkeep, and guest activities.",
+      "texto": "Experienced deckhand to perform exterior maintenance, line handling, tender operations, watersports support and occasional DJ duties aboard a 60m+ private/charter motor yacht on dual-season itinerary.",
       "perfil": "embarque",
-      "score": 7,
-      "motivo": "Barco de 100 m, es tu puesto exacto, no dice en qué puerto",
+      "score": 8,
+      "motivo": "Barco de 60 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
