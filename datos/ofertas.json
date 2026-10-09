@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-08T11:42:32.540Z",
+  "actualizado": "2026-10-09T11:36:54.901Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-08T11:41:02.755Z",
-      "leidas": 97,
-      "utiles": 46
+      "ultimoCheck": "2026-10-09T11:35:24.368Z",
+      "leidas": 81,
+      "utiles": 34
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-08T11:41:46.337Z",
+      "ultimoCheck": "2026-10-09T11:36:09.959Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-08T11:42:01.726Z",
+      "ultimoCheck": "2026-10-09T11:36:25.416Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-08T11:42:32.512Z",
+      "ultimoCheck": "2026-10-09T11:36:54.875Z",
       "leidas": 37,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "ac4122c3426e",
+      "puesto": "Deckhand 70m MY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 70,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "Mediterranean and Caribbean",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113156/deckhand-70m-my/",
+      "publicada": "2026-10-09T11:36:54.866Z",
+      "fechaFiable": false,
+      "texto": "Join as Deckhand aboard a 70m private motor yacht supporting exterior maintenance, mooring, tender and watersports operations, assisting guests and daily deck upkeep across Mediterranean and Caribbean seasons.",
+      "perfil": "embarque",
+      "score": 8,
+      "motivo": "Barco de 70 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "c76655727549",
       "puesto": "Deckhand – Private/Charter – 24m M/Y",
