@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-10-09T11:36:54.901Z",
+  "actualizado": "2026-10-10T10:53:50.902Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-09T11:35:24.368Z",
-      "leidas": 81,
-      "utiles": 34
+      "ultimoCheck": "2026-10-10T10:52:24.907Z",
+      "leidas": 97,
+      "utiles": 45
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-09T11:36:09.959Z",
+      "ultimoCheck": "2026-10-10T10:53:07.882Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-09T11:36:25.416Z",
+      "ultimoCheck": "2026-10-10T10:53:23.235Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-09T11:36:54.875Z",
-      "leidas": 37,
-      "utiles": 31
+      "ultimoCheck": "2026-10-10T10:53:50.873Z",
+      "leidas": 38,
+      "utiles": 32
     }
   },
   "ofertas": [
+    {
+      "id": "e20be02531c4",
+      "puesto": "Lead Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": 46,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "espana",
+      "puerto": "Spain",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113179/lead-deckhand/",
+      "publicada": "2026-10-10T10:53:50.872Z",
+      "fechaFiable": false,
+      "texto": "Experienced Lead Deckhand to oversee deck maintenance, coordinate tender operations, stand bridge watch, train junior crew, and support guest water activities aboard a 46m motor yacht.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 46 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "1d05e7742116",
+      "puesto": "Deckhand position - 50m MY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "South of France",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113178/deckhand-position-50m-my/",
+      "publicada": "2026-10-10T10:53:50.865Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, line handling, tender operations and watersports support on a 50m motor yacht; assist with deck operations, watchkeeping, and guest activities.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "ac4122c3426e",
       "puesto": "Deckhand 70m MY",
