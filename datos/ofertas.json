@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-10-10T10:53:50.902Z",
+  "actualizado": "2026-10-11T11:07:28.663Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-10T10:52:24.907Z",
-      "leidas": 97,
-      "utiles": 45
+      "ultimoCheck": "2026-10-11T11:06:01.323Z",
+      "leidas": 87,
+      "utiles": 37
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-10T10:53:07.882Z",
+      "ultimoCheck": "2026-10-11T11:06:44.138Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-10T10:53:23.235Z",
+      "ultimoCheck": "2026-10-11T11:06:59.625Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-10T10:53:50.873Z",
+      "ultimoCheck": "2026-10-11T11:07:28.634Z",
       "leidas": 38,
       "utiles": 32
     }
@@ -2998,25 +2998,25 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 60,
+      "eslora": 50,
       "tipo": "motor",
       "bandera": null,
       "zona": "mediterraneo",
       "puerto": "Mediterranean",
-      "duracion": "temporada",
+      "duracion": null,
       "alojamiento": "no_indicado",
       "salarioMin": null,
       "periodo": null,
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i111945/deckhand/",
+      "url": "https://www.yacrew.com/i112799/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Experienced deckhand to perform exterior maintenance, line handling, tender operations, watersports support and occasional DJ duties aboard a 60m+ private/charter motor yacht on dual-season itinerary.",
+      "texto": "Perform exterior maintenance, tender operations, line handling, polishing, watch support, and watersports assistance aboard a 50m+ private/charter motor yacht; support guest activities and ensure vessel presentation.",
       "perfil": "embarque",
-      "score": 8,
-      "motivo": "Barco de 60 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "score": 7,
+      "motivo": "Barco de 50 m, es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
