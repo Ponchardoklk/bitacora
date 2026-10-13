@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-12T12:35:05.342Z",
+  "actualizado": "2026-10-13T12:18:58.340Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-12T12:33:37.032Z",
-      "leidas": 67,
-      "utiles": 19
+      "ultimoCheck": "2026-10-13T12:17:27.749Z",
+      "leidas": 97,
+      "utiles": 44
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-12T12:34:21.198Z",
+      "ultimoCheck": "2026-10-13T12:18:12.730Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-12T12:34:36.710Z",
+      "ultimoCheck": "2026-10-13T12:18:28.021Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-12T12:35:05.325Z",
-      "leidas": 38,
-      "utiles": 32
+      "ultimoCheck": "2026-10-13T12:18:58.313Z",
+      "leidas": 37,
+      "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "6339a369fa0e",
+      "puesto": "Deckhand – 50m Private MY | Sydney-Based | Australia",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Australia",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113247/deckhand--50m-private-my--sydney-based--australia/",
+      "publicada": "2026-10-13T12:18:58.304Z",
+      "fechaFiable": false,
+      "texto": "Join a 50m private motor yacht as a deckhand, performing exterior maintenance, line handling, tender driving, watchkeeping and assisting engineering under Bosun and Chief Officer supervision.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "4af1efbbbc95",
       "puesto": "Deckhand Required 50M Motor Yacht",
