@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-15T09:32:37.651Z",
+  "actualizado": "2026-10-16T09:25:03.089Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-15T09:31:04.135Z",
+      "ultimoCheck": "2026-10-16T09:23:33.502Z",
       "leidas": 97,
       "utiles": 44
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-15T09:31:50.338Z",
+      "ultimoCheck": "2026-10-16T09:24:18.520Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-15T09:32:05.907Z",
+      "ultimoCheck": "2026-10-16T09:24:34.823Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-15T09:32:37.621Z",
+      "ultimoCheck": "2026-10-16T09:25:03.072Z",
       "leidas": 37,
       "utiles": 30
     }
   },
   "ofertas": [
+    {
+      "id": "87cd779d4675",
+      "puesto": "Deckhand",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "espana",
+      "puerto": "Spain",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113327/deckhand/",
+      "publicada": "2026-10-16T09:25:03.068Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, washdowns, polishing, tender driving, mooring and guest transfers; support watersports, maintain tenders and deck equipment, and assist with general deck operations.",
+      "perfil": "embarque",
+      "score": 6,
+      "motivo": "Es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "6339a369fa0e",
       "puesto": "Deckhand – 50m Private MY | Sydney-Based | Australia",
