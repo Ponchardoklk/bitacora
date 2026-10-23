@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-22T09:45:32.286Z",
+  "actualizado": "2026-10-23T09:41:49.866Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-22T09:44:00.670Z",
+      "ultimoCheck": "2026-10-23T09:40:18.420Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-22T09:44:44.873Z",
+      "ultimoCheck": "2026-10-23T09:41:03.307Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-22T09:45:00.351Z",
+      "ultimoCheck": "2026-10-23T09:41:20.280Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-22T09:45:32.262Z",
+      "ultimoCheck": "2026-10-23T09:41:49.838Z",
       "leidas": 37,
-      "utiles": 29
+      "utiles": 28
     }
   },
   "ofertas": [
+    {
+      "id": "7c8b29877d03",
+      "puesto": "Deckhand/PT 90m+",
+      "empresa": null,
+      "barco": null,
+      "eslora": 90,
+      "tipo": null,
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Mediterranean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113478/deckhand-pt-90m/",
+      "publicada": "2026-10-23T09:41:49.829Z",
+      "fechaFiable": false,
+      "texto": "Serve as deckhand on a 90m+ yacht supporting exterior operations, tender handling, maintenance, guest activities, and delivering certified personal training sessions and fitness programming for guests.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 90 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "63532747c7cb",
       "puesto": "Deckhand – Private Motor Yacht Syndicate – Gold Coast & Whitsundays",
@@ -1486,25 +1513,25 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 72,
-      "tipo": "motor",
+      "eslora": 61,
+      "tipo": null,
       "bandera": null,
       "zona": "global",
       "puerto": "West Palm Beach, Florida, USA",
-      "duracion": null,
+      "duracion": "temporada",
       "alojamiento": "no_indicado",
       "salarioMin": null,
       "periodo": null,
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112157/deckhand/",
+      "url": "https://www.yacrew.com/i113161/deckhand/",
       "publicada": "2026-09-02T09:12:47.399Z",
       "fechaFiable": false,
-      "texto": "Carry out exterior maintenance, line handling, tender operations and detailed polishing on a 72m motor yacht; support the deck team and maintain safety routines.",
+      "texto": "Hands-on Deckhand for 61m private/charter yacht based in West Palm Beach, maintaining exterior, tender operations, water sports, washdowns, docking, and leading junior deck crew across dual-season program.",
       "perfil": "embarque",
-      "score": 9,
-      "motivo": "Barco de 72 m, es tu puesto exacto",
+      "score": 10,
+      "motivo": "Barco de 61 m, es tu puesto exacto, temporada completa",
       "watchlist": null,
       "fueraDeAlcance": null
     },
