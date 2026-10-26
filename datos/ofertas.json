@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-25T09:31:13.363Z",
+  "actualizado": "2026-10-26T10:39:40.082Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-25T09:29:47.322Z",
+      "ultimoCheck": "2026-10-26T10:38:10.144Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-25T09:30:30.110Z",
+      "ultimoCheck": "2026-10-26T10:38:54.910Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-25T09:30:45.483Z",
+      "ultimoCheck": "2026-10-26T10:39:10.848Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-25T09:31:13.333Z",
-      "leidas": 39,
-      "utiles": 30
+      "ultimoCheck": "2026-10-26T10:39:40.065Z",
+      "leidas": 40,
+      "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "f090aed7fb24",
+      "puesto": "Deckhand 90m+",
+      "empresa": null,
+      "barco": null,
+      "eslora": 90,
+      "tipo": null,
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Mediterranean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113517/deckhand-90m/",
+      "publicada": "2026-10-26T10:39:40.060Z",
+      "fechaFiable": false,
+      "texto": "Experienced deckhand to maintain exterior standards, handle lines and tenders, support watersports and guest activities aboard a busy 90m+ private/charter yacht.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 90 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "2a071cfe33c4",
       "puesto": "Lead Deckhand",
@@ -3241,8 +3268,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 55,
-      "tipo": "motor",
+      "eslora": null,
+      "tipo": null,
       "bandera": null,
       "zona": "mediterraneo",
       "puerto": "Mediterranean",
@@ -3253,13 +3280,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112196/deckhand/",
+      "url": "https://www.yacrew.com/i112417/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, washdowns, polishing, line handling and tender operations; support mooring, guest-focused deck duties, safety routines and team-led deck operations aboard a 55m+ motor yacht.",
+      "texto": "Maintain deck and exterior cleanliness, handle lines and tender operations, support guest water activities, assist maintenance, and ensure vessel presentation and safety during cruising itineraries.",
       "perfil": "embarque",
-      "score": 7,
-      "motivo": "Barco de 55 m, es tu puesto exacto, no dice en qué puerto",
+      "score": 4,
+      "motivo": "Es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
