@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-10-26T10:39:40.082Z",
+  "actualizado": "2026-10-27T10:08:41.713Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-26T10:38:10.144Z",
+      "ultimoCheck": "2026-10-27T10:07:09.105Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-26T10:38:54.910Z",
+      "ultimoCheck": "2026-10-27T10:07:56.739Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-26T10:39:10.848Z",
+      "ultimoCheck": "2026-10-27T10:08:12.225Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-26T10:39:40.065Z",
+      "ultimoCheck": "2026-10-27T10:08:41.697Z",
       "leidas": 40,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "8835a31abdb6",
+      "puesto": "Deckhand With B1B2 Required 50M Motor Yacht",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": "USA currently but Worldwide cruising",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113554/deckhand-with-b1b2-required-50m-motor-yacht/",
+      "publicada": "2026-10-27T10:08:41.692Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, washdowns, polishing, line handling, tender operations and watersports support aboard a 50m motor yacht; assist with watches, safety drills and general deck upkeep.",
+      "perfil": "embarque",
+      "score": 9,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "60451906e4ec",
+      "puesto": "Seasonal Deckhand – Fleet of Tenders – Private Fleet",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": "Northern Red Sea",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113550/seasonal-deckhand--fleet-of-tenders--private-fleet/",
+      "publicada": "2026-10-27T10:08:41.692Z",
+      "fechaFiable": false,
+      "texto": "Operate and maintain a fleet of tenders, perform washdowns, Awlgrip painting, line handling, guest transfers, safety checks and routine exterior maintenance under supervision.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Es tu puesto exacto, temporada completa",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "f090aed7fb24",
       "puesto": "Deckhand 90m+",
@@ -799,7 +853,7 @@
       "url": "https://www.yacrew.com/i112735/deckhand-m-y-37m/",
       "publicada": "2026-09-23T09:39:38.165Z",
       "fechaFiable": false,
-      "texto": "Hands-on deckhand responsible for exterior maintenance, washdowns, polishing, tender operation, line handling, watersports setup, safety watches, mooring assistance and supporting guest water activities aboard a 37m yacht.",
+      "texto": "Perform exterior maintenance, line handling, tender driving, watersports support, watchkeeping, and routine cleaning and polishing on a 37m private motor yacht cruising the Central Mediterranean.",
       "perfil": "embarque",
       "score": 7,
       "motivo": "37 m, por debajo de tu objetivo, es tu puesto exacto",
