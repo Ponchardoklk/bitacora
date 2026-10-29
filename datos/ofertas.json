@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-10-28T10:55:38.426Z",
+  "actualizado": "2026-10-29T11:12:25.525Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-28T10:54:07.394Z",
+      "ultimoCheck": "2026-10-29T11:10:54.936Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-28T10:54:51.431Z",
+      "ultimoCheck": "2026-10-29T11:11:39.884Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-28T10:55:06.912Z",
+      "ultimoCheck": "2026-10-29T11:11:55.394Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-28T10:55:38.409Z",
+      "ultimoCheck": "2026-10-29T11:12:25.507Z",
       "leidas": 40,
       "utiles": 31
     }
@@ -3727,8 +3727,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": null,
-      "tipo": null,
+      "eslora": 90,
+      "tipo": "motor",
       "bandera": null,
       "zona": "global",
       "puerto": "USA",
@@ -3739,13 +3739,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i111661/deckhand/",
+      "url": "https://www.yacrew.com/i113605/deckhand/",
       "publicada": "2026-08-13T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, cleaning, polishing, line handling and tender operations; support carpentry, painting and varnishing tasks during an extended refit and subsequent cruising.",
+      "texto": "Carry out exterior maintenance, polishing, line handling, tender driving and watersports operations; support guest activities, boat handling and general deck operations aboard a 90m private motor yacht.",
       "perfil": "embarque",
-      "score": 4,
-      "motivo": "Es tu puesto exacto, no dice en qué puerto",
+      "score": 7,
+      "motivo": "Barco de 90 m, es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
