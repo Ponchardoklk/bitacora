@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-10-31T10:41:29.463Z",
+  "actualizado": "2026-11-01T11:35:31.057Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-10-31T10:40:00.129Z",
+      "ultimoCheck": "2026-11-01T11:33:59.769Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-10-31T10:40:43.598Z",
+      "ultimoCheck": "2026-11-01T11:34:44.846Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-10-31T10:40:59.214Z",
+      "ultimoCheck": "2026-11-01T11:35:00.181Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-10-31T10:41:29.437Z",
-      "leidas": 40,
+      "ultimoCheck": "2026-11-01T11:35:31.034Z",
+      "leidas": 39,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "0e443108e3dc",
+      "puesto": "Temporary Deckhand Required",
+      "empresa": null,
+      "barco": null,
+      "eslora": 27,
+      "tipo": null,
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Ventimiglia, Italy",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113665/temporary-deckhand-required/",
+      "publicada": "2026-11-01T11:35:31.028Z",
+      "fechaFiable": false,
+      "texto": "Temporary deckhand/mate cover for 27m Riva in Ventimiglia; oversee hard-standing refit, supervise contractors, attend daily, assist recommissioning, sea trials, and training records.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "27 m, por debajo de tu objetivo, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "b463cac0982a",
       "puesto": "Deckhand — 70m Sailing Yacht",
