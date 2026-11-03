@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-11-02T12:58:33.563Z",
+  "actualizado": "2026-11-03T12:30:25.613Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-02T12:57:03.724Z",
+      "ultimoCheck": "2026-11-03T12:28:56.460Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-02T12:57:48.504Z",
+      "ultimoCheck": "2026-11-03T12:29:39.620Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-02T12:58:04.098Z",
+      "ultimoCheck": "2026-11-03T12:29:55.090Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-02T12:58:33.543Z",
+      "ultimoCheck": "2026-11-03T12:30:25.581Z",
       "leidas": 39,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "36279c17a5b9",
+      "puesto": "Deckhand - 100M+ Private Motor Yacht",
+      "empresa": null,
+      "barco": null,
+      "eslora": 100,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "global",
+      "puerto": null,
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113720/deckhand-100m-private-motor-yacht/",
+      "publicada": "2026-11-03T12:30:25.573Z",
+      "fechaFiable": false,
+      "texto": "Perform exterior maintenance, line handling, tender driving, watersports support and routine deck operations aboard a 100m+ private motor yacht, ensuring safety and pristine presentation.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 100 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "639848cc9ef1",
       "puesto": "Temporary Deckhand",
@@ -3565,7 +3592,7 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 100,
+      "eslora": 50,
       "tipo": "motor",
       "bandera": null,
       "zona": "mediterraneo",
@@ -3577,13 +3604,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112638/deckhand/",
+      "url": "https://www.yacrew.com/i112799/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, washdowns, polishing, line handling, tender operations and watersports support on a 100m+ motor yacht; assist deck team with safety, equipment upkeep, and guest activities.",
+      "texto": "Perform exterior maintenance, tender operations, line handling, polishing, watch support, and watersports assistance aboard a 50m+ private/charter motor yacht; support guest activities and ensure vessel presentation.",
       "perfil": "embarque",
       "score": 7,
-      "motivo": "Barco de 100 m, es tu puesto exacto, no dice en qué puerto",
+      "motivo": "Barco de 50 m, es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
