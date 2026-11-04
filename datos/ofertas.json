@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-11-03T12:30:25.613Z",
+  "actualizado": "2026-11-04T12:42:21.683Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-03T12:28:56.460Z",
-      "leidas": 97,
-      "utiles": 42
+      "ultimoCheck": "2026-11-04T12:40:49.247Z",
+      "leidas": 79,
+      "utiles": 27
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-03T12:29:39.620Z",
+      "ultimoCheck": "2026-11-04T12:41:34.023Z",
       "leidas": 85,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-03T12:29:55.090Z",
+      "ultimoCheck": "2026-11-04T12:41:49.363Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-03T12:30:25.581Z",
+      "ultimoCheck": "2026-11-04T12:42:21.648Z",
       "leidas": 39,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "66b1ccf02d6a",
+      "puesto": "Deckhand/Engineer",
+      "empresa": null,
+      "barco": null,
+      "eslora": 70,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Mediterranean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113750/deckhand-engineer/",
+      "publicada": "2026-11-04T12:42:21.640Z",
+      "fechaFiable": false,
+      "texto": "Carry out deck maintenance, tender and toy upkeep, drive tenders, perform mechanical maintenance and engineering checks, support watchkeeping and safety on a 70m private motor yacht.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 70 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "36279c17a5b9",
       "puesto": "Deckhand - 100M+ Private Motor Yacht",
