@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-11-05T12:52:11.769Z",
+  "actualizado": "2026-11-06T12:36:31.082Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-05T12:50:42.861Z",
+      "ultimoCheck": "2026-11-06T12:34:59.460Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-05T12:51:26.276Z",
-      "leidas": 85,
-      "utiles": 2
+      "ultimoCheck": "2026-11-06T12:35:44.303Z",
+      "leidas": 86,
+      "utiles": 3
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-05T12:51:41.715Z",
+      "ultimoCheck": "2026-11-06T12:36:00.169Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-05T12:52:11.751Z",
+      "ultimoCheck": "2026-11-06T12:36:31.054Z",
       "leidas": 39,
       "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "74492065fbfe",
+      "puesto": "Patrón/patrona de barco",
+      "empresa": null,
+      "barco": null,
+      "eslora": null,
+      "tipo": "catamaran",
+      "bandera": null,
+      "zona": "espana",
+      "puerto": "España",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "Jobs&Sea",
+      "url": "https://www.jobsandsea.com/job/patronpatrona-de-barco",
+      "publicada": "2026-11-06T12:35:44.291Z",
+      "fechaFiable": false,
+      "texto": "Como Patrón/patrona portuario , te encargarás de llevar nuestro catamarán con turistas en travesías fluviales por el río Sil, garantizando la seguridad de la tripulación, los pasajeros y la embarcación, trabajando en estrecha coordinación con el equipo técnico-administrativo.\n\nTítulo Patrón portuario en regla : Requisito legal y técnico para operar embarcaciones en puertos y aguas interiores, asegurando el cumplimiento normativo y la confiabilidad operativa.\n\nValoramos sobre todo el compromiso, la responsabilidad y la buena actitud.\n\nOtros beneficios: Posibilidad de alojamiento en alquiler.",
+      "perfil": "embarque",
+      "score": 5,
+      "motivo": "El anuncio da pocos datos",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "66b1ccf02d6a",
       "puesto": "Deckhand/Engineer",
