@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-11-10T13:09:05.856Z",
+  "actualizado": "2026-11-11T12:18:22.996Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-10T13:07:37.341Z",
+      "ultimoCheck": "2026-11-11T12:16:50.890Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-10T13:08:21.232Z",
+      "ultimoCheck": "2026-11-11T12:17:37.279Z",
       "leidas": 86,
       "utiles": 3
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-10T13:08:36.654Z",
+      "ultimoCheck": "2026-11-11T12:17:52.832Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-10T13:09:05.822Z",
+      "ultimoCheck": "2026-11-11T12:18:22.963Z",
       "leidas": 43,
       "utiles": 34
     }
   },
   "ofertas": [
+    {
+      "id": "f7c1e6c380d2",
+      "puesto": "Deckhand 70m+",
+      "empresa": null,
+      "barco": null,
+      "eslora": 70,
+      "tipo": null,
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": "Caribbean",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i113906/deckhand-70m/",
+      "publicada": "2026-11-11T12:18:22.952Z",
+      "fechaFiable": false,
+      "texto": "Carry out daily deck maintenance, exterior cleaning, line handling, tender and watersports operations; support guest fishing, diving and activities aboard a 70m+ private charter yacht.",
+      "perfil": "embarque",
+      "score": 7,
+      "motivo": "Barco de 70 m, es tu puesto exacto, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "2c013382c5bc",
       "puesto": "Lead Deckhand - Private/Charter 100m+ MY",
