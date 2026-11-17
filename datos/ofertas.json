@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-11-16T13:15:28.035Z",
+  "actualizado": "2026-11-17T13:58:45.025Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-16T13:14:01.090Z",
+      "ultimoCheck": "2026-11-17T13:57:19.327Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-16T13:14:43.542Z",
+      "ultimoCheck": "2026-11-17T13:58:02.509Z",
       "leidas": 87,
       "utiles": 2
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-16T13:14:58.875Z",
+      "ultimoCheck": "2026-11-17T13:58:17.899Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-16T13:15:28.010Z",
+      "ultimoCheck": "2026-11-17T13:58:44.991Z",
       "leidas": 42,
       "utiles": 33
     }
@@ -4132,8 +4132,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": 100,
-      "tipo": "motor",
+      "eslora": null,
+      "tipo": null,
       "bandera": null,
       "zona": "mediterraneo",
       "puerto": "Mediterranean",
@@ -4144,13 +4144,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i112914/deckhand/",
+      "url": "https://www.yacrew.com/i113623/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Experienced deckhand responsible for exterior upkeep, line handling, polishing, tender driving, watersports support, and assisting maintenance and watch duties aboard a 100m+ motor yacht.",
+      "texto": "Operate and maintain exterior yacht areas, perform washdowns, polish, line handling, tender driving, assist with watersports and deck maintenance, support busy charter operations.",
       "perfil": "embarque",
-      "score": 7,
-      "motivo": "Barco de 100 m, es tu puesto exacto, no dice en qué puerto",
+      "score": 4,
+      "motivo": "Es tu puesto exacto, no dice en qué puerto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
