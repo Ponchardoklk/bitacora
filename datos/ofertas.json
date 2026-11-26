@@ -1,28 +1,82 @@
 {
-  "actualizado": "2026-11-25T15:07:37.457Z",
+  "actualizado": "2026-11-26T14:36:19.494Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-25T15:06:46.652Z",
+      "ultimoCheck": "2026-11-26T14:35:29.461Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-25T15:06:52.270Z",
+      "ultimoCheck": "2026-11-26T14:35:34.858Z",
       "leidas": 0,
       "utiles": 0
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-25T15:07:08.474Z",
+      "ultimoCheck": "2026-11-26T14:35:50.204Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-25T15:07:37.433Z",
-      "leidas": 42,
-      "utiles": 32
+      "ultimoCheck": "2026-11-26T14:36:19.452Z",
+      "leidas": 43,
+      "utiles": 33
     }
   },
   "ofertas": [
+    {
+      "id": "51f29a076e54",
+      "puesto": "Junior deckhand on a 40m yacht",
+      "empresa": null,
+      "barco": null,
+      "eslora": 40,
+      "tipo": null,
+      "bandera": null,
+      "zona": "mediterraneo",
+      "puerto": "Bodrum, Turkey",
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i114474/junior-deckhand-on-a-40m-yacht/",
+      "publicada": "2026-11-26T14:36:19.449Z",
+      "fechaFiable": false,
+      "texto": "Join a 40m charter yacht in Turkey as a junior deckhand for a single season. Ideal for candidates with high standards, proven longevity, excellent references, and a non-smoking lifestyle.",
+      "perfil": "embarque",
+      "score": 10,
+      "motivo": "Barco de 40 m, es tu puesto exacto, temporada completa",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
+    {
+      "id": "7b62201755d9",
+      "puesto": "Deckhand on a 50m Superyacht",
+      "empresa": null,
+      "barco": null,
+      "eslora": 50,
+      "tipo": null,
+      "bandera": null,
+      "zona": "global",
+      "puerto": "South of France, France",
+      "duracion": null,
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": true,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i114475/deckhand-on-a-50m-superyacht/",
+      "publicada": "2026-11-26T14:36:19.442Z",
+      "fechaFiable": false,
+      "texto": "Lead deckhand role on a 50m private superyacht in the South of France, maintaining the vessel's exterior and tender operations to a high standard. Relaxed, low-sea-time position suited to experienced, non-smoking PB2-qualified candidates.",
+      "perfil": "embarque",
+      "score": 8,
+      "motivo": "Barco de 50 m, es tu puesto exacto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "c277c7cf11e0",
       "puesto": "Junior Deckhand on 50m private yacht",
