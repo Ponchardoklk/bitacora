@@ -1,28 +1,55 @@
 {
-  "actualizado": "2026-11-26T14:36:19.494Z",
+  "actualizado": "2026-11-27T14:30:46.795Z",
   "fuentes": {
     "Emplea Náutica": {
-      "ultimoCheck": "2026-11-26T14:35:29.461Z",
+      "ultimoCheck": "2026-11-27T14:29:57.919Z",
       "leidas": 97,
       "utiles": 42
     },
     "Jobs&Sea": {
-      "ultimoCheck": "2026-11-26T14:35:34.858Z",
+      "ultimoCheck": "2026-11-27T14:30:03.260Z",
       "leidas": 0,
       "utiles": 0
     },
     "InfoJobs": {
-      "ultimoCheck": "2026-11-26T14:35:50.204Z",
+      "ultimoCheck": "2026-11-27T14:30:18.572Z",
       "leidas": 0,
       "utiles": 0
     },
     "YaCrew": {
-      "ultimoCheck": "2026-11-26T14:36:19.452Z",
-      "leidas": 43,
-      "utiles": 33
+      "ultimoCheck": "2026-11-27T14:30:46.753Z",
+      "leidas": 40,
+      "utiles": 31
     }
   },
   "ofertas": [
+    {
+      "id": "b2d8266dddb0",
+      "puesto": "Deckhand 60m+ MY",
+      "empresa": null,
+      "barco": null,
+      "eslora": 60,
+      "tipo": "motor",
+      "bandera": null,
+      "zona": "caribe",
+      "puerto": null,
+      "duracion": "temporada",
+      "alojamiento": "no_indicado",
+      "salarioMin": null,
+      "periodo": null,
+      "eng1": false,
+      "pb2": false,
+      "fuente": "YaCrew",
+      "url": "https://www.yacrew.com/i114524/deckhand-60m-my/",
+      "publicada": "2026-11-27T14:30:46.744Z",
+      "fechaFiable": false,
+      "texto": "Join a well-established 60m+ private and charter yacht offering busy programmes, dual Mediterranean and Caribbean seasons, and a sociable, fitness-focused crew culture. Strong water sports skills are valued.",
+      "perfil": "embarque",
+      "score": 8,
+      "motivo": "Barco de 60 m, es tu puesto exacto, temporada completa, no dice en qué puerto",
+      "watchlist": null,
+      "fueraDeAlcance": null
+    },
     {
       "id": "51f29a076e54",
       "puesto": "Junior deckhand on a 40m yacht",
@@ -4672,8 +4699,8 @@
       "puesto": "Deckhand",
       "empresa": null,
       "barco": null,
-      "eslora": null,
-      "tipo": null,
+      "eslora": 100,
+      "tipo": "motor",
       "bandera": null,
       "zona": "global",
       "puerto": "Pacific Ocean",
@@ -4684,13 +4711,13 @@
       "eng1": false,
       "pb2": false,
       "fuente": "YaCrew",
-      "url": "https://www.yacrew.com/i114027/deckhand/",
+      "url": "https://www.yacrew.com/i113962/deckhand/",
       "publicada": "2026-08-25T09:00:00.000Z",
       "fechaFiable": true,
-      "texto": "Perform exterior maintenance, washdowns, polishing, line handling and tender operations; assist with mooring, launches, safety drills, deck equipment upkeep, watersports support, and onboard general seamanship.",
+      "texto": "Perform exterior maintenance, line handling, tender operations and varnishing on a 100m+ motor yacht; conduct watches, tender driving, work at height and support the deck team.",
       "perfil": "embarque",
-      "score": 6,
-      "motivo": "Es tu puesto exacto",
+      "score": 9,
+      "motivo": "Barco de 100 m, es tu puesto exacto",
       "watchlist": null,
       "fueraDeAlcance": null
     },
